@@ -1,0 +1,122 @@
+ J Rashmitha Reddy
+
+Profile - Software Engineer(Selected)
+
+Written Test
+
+    4 Coding Questions(90 minutes)
+        Find the kth factor of a number
+        Given a string, count number of i's such that 0 to i-1 and i+1 to n have anagrams of PROGRAMMER
+        Given k umbrellas, number of people fitting in each of these k umbrellas, and n people, find minimum number of umbrellas required to cover exactly n people.
+        Get kth lexicographic permutation
+
+Interviews
+
+    Round 1
+        The interviewer introduced herself and asked to tell me about myself. There were two coding questions in this round.
+        First question Given a paragraph of text, and a secret word, find(if exists) and return the first occurrence of the first letter(of secret word) where letters in the secret keyword occur vertically in the text(Can the text be arranged in such a way?).
+        Second Question For an occurrence of secret keyword in the text, the cost is calculated as sum of distances between occurrences of adjacent letters. Find the minimum cost.
+        No limit on time complexity. I gave backtracking solutions for both the questions. There was no restriction on programming language. I had to write code, not an algorithm.
+
+    Round 2
+        Again, the interviewer(from Hyderabad Office) introduced himself and asked about my MTP. There were two coding questions in this round also.
+        First question Find the minimum in a sliding window of size k. Give a time and memory efficient solution. Solved using queue.(Easy question)
+        Second Question Find the median in a sliding window of size k. Solved using BST.
+
+    Round 3
+        Given a dictionary of words, find all words in the dictionary where a search key occurs as a sub string. Solved using trie. Gave an inefficient solution at first, and then improved it step by step.
+--------------------------------------------------------------------------
+
+Ankit Rokde (Selected)
+
+Coding Test
+
+    4 coding questions were asked to be solved in 2 hrs I think. I solved 2 complete and 1 half.
+        Questions:
+            Check if a number can be obtained as the sum of natural numbers. You dont know from where to start the natural numbers as well as how many numbers to take
+            Given a graph with edges can be formed based on some constraints check if a node is reachable from other (This was based on whether nodes are in the same component).
+            Something related to monsters and guns
+            I dont remember the fourth problem
+
+Interviews
+
+    Round 1: (Duration : approx 30 min)
+        The interviewer had the copy of my coding test submission and asked me about the same. How many problems did I solve?
+        He gave me a problem if I had to sort a doubly linked list of integers how would I sort it?
+
+I said merge sort and told him why Quick sort is not the right choice here. He asked me to write the code for it. He asked me about intricacies in implementing the merge step.
+
+    I asked me about my interest areas and I said functional programming and devops. He asked me what devops is? I answered it to best of my knowledge.
+    He again glanced at my resume and noticed that I had work experience. He asked me to wait and I was immediately called for the second round.
+
+    Round 2: (Duration: approx 30 min)
+        This interviewer was concerned with security aspects of the application also performance latency etc. etc.
+        He was not framing questions correctly and I had to clarify the questions again and again.
+        He asked me about REST, and how to make the applications secure?
+        If we submit a login form can I see your password. I said if the connection is HTTPS then nobody in the middle can see the plaintext password. He said what about the browser itself.
+        He asked me about CSRF(cross site request forgery), Salting mechanism for password and simple secure coding practices
+        I think he also asked me to code for some simple problem which I dont remember
+        Again some discussion related to devops
+
+    Round 3: (Duration: approx 30 mins)
+        This was a senior guy and also with large responsibility at VISA
+        He asked me about my work experience and which frameworks I have used
+        He asked me about the architecture about one of the projects I had worked on during my work experience in my company
+        He told me the kind of work they are doing in VISA and how latency and security are the most critical things there. They were also migrating from the mainframes infrastructure to a cloud based infrastructure. My interest in devops made me more and more keen to work there.
+        The he asked me typical HR questions like why do you want to work at VISA? Why did you do M. Tech. ?
+
+I think they were impressed by my work experience and it was evident in each round and making sure that I knew my stuff.
+
+Preparation tips
+
+    Know your resume in and out.
+    Read about your interest areas and typical interview questions around them.
+    Know about the company's work area.
+
+Resources for preparation 
+---------------------------------------------------------------------------
+flipkart
+
+Round1: 1)Given a rod of length n and k marbles with their velocity is given,whenver marble collide with each other it changes its direction(Elastic) and their velocity got exchanged,Also whenver marble reaches any end of rod it fall from rod surface.What is the worst case time taken for all marble to fall from rod surface?
+
+2)How to save a tree in array efficiently without wasting any space?
+
+Round2: 1)Given arrival and departure time of n trains ,find the min no of station required to accomodate all the trains?
+
+2)Given a dictionary and a long text(without space) ,Determine all the words(with space) present in the text which are present in dictionary?
+
+3)find all the nodes from k distance from a given node(No parent pointers is present and without using extra space)?
+
+4)Give an efficient algo if some nodes in BST are swap, we need to identify all these nodes?
+
+---------------------------------------------------------------------------------
+Prashant M
+Goldman Sachs
+Q1)given an array of colors of socks say [R,B,R,R,B,R,B] how many socks a sane customer would buy(Just setting the temperament for interview)? here ans is 6(4R,2B)
+
+Q2)Sort an stack using only another stack?
+
+Q3)find no of character to be added inorder to make a string palindrome?
+
+Q4)Data structure to implement family tree?
+
+Q5)Implement LRU Cache?
+
+Q6)how hash map is implemented internally in java? 
+
+Uber
+Q1)In a 2D grid where 1 represent obstacle and 0 Represent path, find the min path from top left to reach a given destination D ?
+
+Q2)Modified above problem with,where you can remove Atmost one obstacle ,Now find the min path ?
+
+Q3)Modified above problem with,where you can remove Atmost K obstacle ,Now find the min path ?
+
+Q4) Design snake game ,It grow when it eats a fruit present in a cell in the given 2D grid,where food is generated randomly and user can press L,R,U,D button to specify direction in each second ?
+
+Q5)Design hackerank,Class structure and funtion and how the whole system works?
+
+Tips:Read geeks4geeks company wise subjective questions
+
+
+
+

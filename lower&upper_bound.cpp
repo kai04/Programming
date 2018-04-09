@@ -1,7 +1,5 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
 
 int main(){
     int n;
@@ -12,7 +10,7 @@ int main(){
     }
     int x,y;
     cin>>x>>y;
-    sort(a.begin(),a.end());
+    // sort(a.begin(),a.end());
     vector<int>:: iterator lower=lower_bound(a.begin(),a.end(),x);
     vector<int>:: iterator upper=upper_bound(a.begin(),a.end(),y);
     cout<<"lower bound of "<<x<<" found at index:"<<(lower-a.begin())-1<<" distance of x from start is:"<<distance(a.begin(),lower)<<endl;
