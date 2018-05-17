@@ -165,6 +165,30 @@ int diameter(Node* node)
    // Your code here
 }
 
+
+void printTree(Node* p, int indent)
+{
+    /*if(p==NULL){
+        cout<<"khali he"<<endl;
+        return;
+    }*/
+    if(p != NULL) {
+        if(p->right) {
+            postorder(p->right, indent+4);
+        }
+        if (indent) {
+            std::cout << std::setw(indent) << ' ';
+        }
+        if (p->right) 
+            std::cout<<" /\n" << std::setw(indent) << ' ';
+            std::cout<< p->data << "\n ";
+        if(p->left) {
+            std::cout << std::setw(indent) << ' ' <<" \\\n";
+            postorder(p->left, indent+4);
+        }
+    }
+}
+
 int main(){
     int n,rt;
     cin>>n;

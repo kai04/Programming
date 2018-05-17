@@ -116,7 +116,60 @@ Q4) Design snake game ,It grow when it eats a fruit present in a cell in the giv
 Q5)Design hackerank,Class structure and funtion and how the whole system works?
 
 Tips:Read geeks4geeks company wise subjective questions
+-----------------------------------------------------------
+Microsoft interview:
+    Merge k (in this case k=2) arrays and sort them.
+    How best to select a representative sample of search queries from 5 million?
+    Three friends in Seattle told you it’s rainy. Each has a probability of 1/3 of lying. What’s the probability of Seattle is rainy?
+    Can you explain the fundamentals of Naive Bayes? How do you set the threshold?
+    Can you explain what MapReduce is and how it works?
+    Can you explain SVM?
+    How do you detect if a new observation is outlier? What is a bias-variance trade off ?
+    Discuss how to randomly select a sample from a product user population.
+    How do you implement autocomplete?
+    Describe the working of gradient boost.
+    Find the maximum of sub sequence in an integer list.
+    What would you do to summarize a twitter feed?
+    Explain the steps for data wrangling and cleaning before applying machine learning algorithms.
+    How to deal with unbalanced binary classification?
+    How to measure distance between data point?
+    Define variance.
+    What is the difference between box plot and histogram?
+    How do you solve the L2-regularized regression problem?
+    How to compute an inverse matrix faster by playing around with some computational tricks?
+    How to perform a series of calculations without a calculator. Explain the logic behind the steps.
+    What is a difference between good and bad Data Visualization?
+    How do you find percentile? Write the code for it.
+    Find max sum subsequence from a sequence of values.
+    What are the different regularization metrics L1 and L2?
+    Create a function that checks if a word is a palindrome.
 
+--------------------------------------------------------------
+start mysql(password is tiger):  mysql -u root -p
+use db;
+show tables;----here u will see keyval table
+Input table:
++---------+-------+-----------+
+| name    | key1  | val       |
++---------+-------+-----------+
+| Ram     | City  | Bangalore |
+| Ram     | Age   | 27        |
+| Ram     | Title | Analyst   |
+| Ashok   | City  | Delhi     |
+| Ashok   | Age   | 35        |
+| Krishna | City  | Mumbai    |
+| Krishna | Age   | 22        |
+| Ashok   | Title | Engineer  |
++---------+-------+-----------+
+Output table:
++---------+-----+-----------+----------+
+| Name    | Age | City      | Title    |
++---------+-----+-----------+----------+
+| Ram     | 27  | Bangalore | Analyst  |
+| Ashok   | 35  | Delhi     | Engineer |
+| Krishna | 22  | Mumbai    | NULL     |
++---------+-----+-----------+----------+
 
-
+Query:
+select c.name as Name,c.age_val as Age,c.city_val as City,d.val as Title from (select a.name,a.key1 as city,a.val as city_val,b.key1 as age,b.val as age_val from keyval a INNER JOIN keyval b ON a.name = b.name and a.key1='City' and b.key1='Age') as c LEFT JOIN keyval as d ON c.name=d.name and d.key1='Title';
 

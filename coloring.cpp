@@ -14,6 +14,7 @@ bool isSafe(int k,int c){
     return flag;
 }
 void graphcolor(int k){
+	//for all edges
     for(int c=1;c<=m;c++){
         if(isSafe(k,c)){
             x[k]=c;
@@ -28,6 +29,7 @@ void graphcolor(int k){
 }
 int main(){
     //int n,m;
+    //n nodes m edges
     cin>>n>>m;
     G.resize(n+1,vector<int>(n+1));
     for(int i = 0;i < n;i++){
