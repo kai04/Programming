@@ -173,3 +173,43 @@ Output table:
 Query:
 select c.name as Name,c.age_val as Age,c.city_val as City,d.val as Title from (select a.name,a.key1 as city,a.val as city_val,b.key1 as age,b.val as age_val from keyval a INNER JOIN keyval b ON a.name = b.name and a.key1='City' and b.key1='Age') as c LEFT JOIN keyval as d ON c.name=d.name and d.key1='Title';
 
+---------------------------------------------------------------------------
+LinkedIN
+
+Q) write code for k-means algo in c++?(where does k-means does not work and drawback of kmeans).
+
+Q)Given k and array A ,divide A into k partition with each partition have same sum?
+
+Q)Why LSTM does not have vanishing gradient problem (math behind it) ?
+
+Q)there are some Red and blue balls in a bag ,we take 1 ball from bag and replace it and we repeat this process n times. what is the prob of seeing k red balls after n iteration? 
+
+Q)A biased coin with head prob p,make use of this coin to create a fair dice?(Hint:first create unbiased coin from this biased coin)
+
+Q)why logistic regression is same as principle of maximum entropy?
+
+Q)N people are standing in a line at some random distance from each other ,we need to find a point where all of them can meet with sum of displacement of each person is minimum? i.e for all i (1 to N) miminize{summation(|x_i - x_e|)} where x_e is a point where everybody meet?(Hint:can use second norm instead first norm and then differentiate wrt x_e and find value of x_e)
+
+Q)Lot of question on logistic regression (convergence etcetre) 
+
+Q)there are N players ,we need to rank these N player by making them play game with each other (In Default ranking setting A player say x play game with all N-1 players and based on that ranking of x is defined) But in this setting we have to reduce no. of games play based on the fact that let y looses to z and x loosed to y then x will loosed to y ?
+
+Q)New tab with recommendation of company interest for linked profile need to be added?(Design problem)
+-------------------------------------------------------------------------
+CodeNation
+Q)Given N nubers in array ,we need to find a pair of numbers such that when we perform their individual digits modulo 10 sum the result is maximum?ex (1234+797=1921) (Hint solve using Trie)
+342,896,1234,797,1024,14,135
+
+Q)N Currency exchange rate are given in matrix and matix is some what symmetric means 1 US$ = 67 INR then 1 INR = (1/67) US$.then find the coversion c1-c2-c3 ... ck-c1 such that it is greater than 1?
+Similar to this pb:https://courses.csail.mit.edu/6.046/spring04/handouts/ps7sol.pdf
+
+
+Q)https://www.geeksforgeeks.org/split-array-three-equal-sum-subarrays/
+https://www.geeksforgeeks.org/count-the-number-of-ways-to-divide-an-array-into-three-contiguous-parts-having-equal-sum/
+
+
+
+   
+
+
+
