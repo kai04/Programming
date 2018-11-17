@@ -1,0 +1,215 @@
+ J Rashmitha Reddy
+
+Profile - Software Engineer(Selected)
+
+Written Test
+
+    4 Coding Questions(90 minutes)
+        Find the kth factor of a number
+        Given a string, count number of i's such that 0 to i-1 and i+1 to n have anagrams of PROGRAMMER
+        Given k umbrellas, number of people fitting in each of these k umbrellas, and n people, find minimum number of umbrellas required to cover exactly n people.
+        Get kth lexicographic permutation
+
+Interviews
+
+    Round 1
+        The interviewer introduced herself and asked to tell me about myself. There were two coding questions in this round.
+        First question Given a paragraph of text, and a secret word, find(if exists) and return the first occurrence of the first letter(of secret word) where letters in the secret keyword occur vertically in the text(Can the text be arranged in such a way?).
+        Second Question For an occurrence of secret keyword in the text, the cost is calculated as sum of distances between occurrences of adjacent letters. Find the minimum cost.
+        No limit on time complexity. I gave backtracking solutions for both the questions. There was no restriction on programming language. I had to write code, not an algorithm.
+
+    Round 2
+        Again, the interviewer(from Hyderabad Office) introduced himself and asked about my MTP. There were two coding questions in this round also.
+        First question Find the minimum in a sliding window of size k. Give a time and memory efficient solution. Solved using queue.(Easy question)
+        Second Question Find the median in a sliding window of size k. Solved using BST.
+
+    Round 3
+        Given a dictionary of words, find all words in the dictionary where a search key occurs as a sub string. Solved using trie. Gave an inefficient solution at first, and then improved it step by step.
+--------------------------------------------------------------------------
+
+Ankit Rokde (Selected)
+
+Coding Test
+
+    4 coding questions were asked to be solved in 2 hrs I think. I solved 2 complete and 1 half.
+        Questions:
+            Check if a number can be obtained as the sum of natural numbers. You dont know from where to start the natural numbers as well as how many numbers to take
+            Given a graph with edges can be formed based on some constraints check if a node is reachable from other (This was based on whether nodes are in the same component).
+            Something related to monsters and guns
+            I dont remember the fourth problem
+
+Interviews
+
+    Round 1: (Duration : approx 30 min)
+        The interviewer had the copy of my coding test submission and asked me about the same. How many problems did I solve?
+        He gave me a problem if I had to sort a doubly linked list of integers how would I sort it?
+
+I said merge sort and told him why Quick sort is not the right choice here. He asked me to write the code for it. He asked me about intricacies in implementing the merge step.
+
+    I asked me about my interest areas and I said functional programming and devops. He asked me what devops is? I answered it to best of my knowledge.
+    He again glanced at my resume and noticed that I had work experience. He asked me to wait and I was immediately called for the second round.
+
+    Round 2: (Duration: approx 30 min)
+        This interviewer was concerned with security aspects of the application also performance latency etc. etc.
+        He was not framing questions correctly and I had to clarify the questions again and again.
+        He asked me about REST, and how to make the applications secure?
+        If we submit a login form can I see your password. I said if the connection is HTTPS then nobody in the middle can see the plaintext password. He said what about the browser itself.
+        He asked me about CSRF(cross site request forgery), Salting mechanism for password and simple secure coding practices
+        I think he also asked me to code for some simple problem which I dont remember
+        Again some discussion related to devops
+
+    Round 3: (Duration: approx 30 mins)
+        This was a senior guy and also with large responsibility at VISA
+        He asked me about my work experience and which frameworks I have used
+        He asked me about the architecture about one of the projects I had worked on during my work experience in my company
+        He told me the kind of work they are doing in VISA and how latency and security are the most critical things there. They were also migrating from the mainframes infrastructure to a cloud based infrastructure. My interest in devops made me more and more keen to work there.
+        The he asked me typical HR questions like why do you want to work at VISA? Why did you do M. Tech. ?
+
+I think they were impressed by my work experience and it was evident in each round and making sure that I knew my stuff.
+
+Preparation tips
+
+    Know your resume in and out.
+    Read about your interest areas and typical interview questions around them.
+    Know about the company's work area.
+
+Resources for preparation 
+---------------------------------------------------------------------------
+flipkart
+
+Round1: 1)Given a rod of length n and k marbles with their velocity is given,whenver marble collide with each other it changes its direction(Elastic) and their velocity got exchanged,Also whenver marble reaches any end of rod it fall from rod surface.What is the worst case time taken for all marble to fall from rod surface?
+
+2)How to save a tree in array efficiently without wasting any space?
+
+Round2: 1)Given arrival and departure time of n trains ,find the min no of station required to accomodate all the trains?
+
+2)Given a dictionary and a long text(without space) ,Determine all the words(with space) present in the text which are present in dictionary?
+
+3)find all the nodes from k distance from a given node(No parent pointers is present and without using extra space)?
+
+4)Give an efficient algo if some nodes in BST are swap, we need to identify all these nodes?
+
+---------------------------------------------------------------------------------
+Prashant M
+Goldman Sachs
+Q1)given an array of colors of socks say [R,B,R,R,B,R,B] how many socks a sane customer would buy(Just setting the temperament for interview)? here ans is 6(4R,2B)
+
+Q2)Sort an stack using only another stack?
+
+Q3)find no of character to be added inorder to make a string palindrome?
+
+Q4)Data structure to implement family tree?
+
+Q5)Implement LRU Cache?
+
+Q6)how hash map is implemented internally in java? 
+
+Uber
+Q1)In a 2D grid where 1 represent obstacle and 0 Represent path, find the min path from top left to reach a given destination D ?
+
+Q2)Modified above problem with,where you can remove Atmost one obstacle ,Now find the min path ?
+
+Q3)Modified above problem with,where you can remove Atmost K obstacle ,Now find the min path ?
+
+Q4) Design snake game ,It grow when it eats a fruit present in a cell in the given 2D grid,where food is generated randomly and user can press L,R,U,D button to specify direction in each second ?
+
+Q5)Design hackerank,Class structure and funtion and how the whole system works?
+
+Tips:Read geeks4geeks company wise subjective questions
+-----------------------------------------------------------
+Microsoft interview:
+    Merge k (in this case k=2) arrays and sort them.
+    How best to select a representative sample of search queries from 5 million?
+    Three friends in Seattle told you it’s rainy. Each has a probability of 1/3 of lying. What’s the probability of Seattle is rainy?
+    Can you explain the fundamentals of Naive Bayes? How do you set the threshold?
+    Can you explain what MapReduce is and how it works?
+    Can you explain SVM?
+    How do you detect if a new observation is outlier? What is a bias-variance trade off ?
+    Discuss how to randomly select a sample from a product user population.
+    How do you implement autocomplete?
+    Describe the working of gradient boost.
+    Find the maximum of sub sequence in an integer list.
+    What would you do to summarize a twitter feed?
+    Explain the steps for data wrangling and cleaning before applying machine learning algorithms.
+    How to deal with unbalanced binary classification?
+    How to measure distance between data point?
+    Define variance.
+    What is the difference between box plot and histogram?
+    How do you solve the L2-regularized regression problem?
+    How to compute an inverse matrix faster by playing around with some computational tricks?
+    How to perform a series of calculations without a calculator. Explain the logic behind the steps.
+    What is a difference between good and bad Data Visualization?
+    How do you find percentile? Write the code for it.
+    Find max sum subsequence from a sequence of values.
+    What are the different regularization metrics L1 and L2?
+    Create a function that checks if a word is a palindrome.
+
+--------------------------------------------------------------
+start mysql(password is tiger):  mysql -u root -p
+use db;
+show tables;----here u will see keyval table
+Input table:
++---------+-------+-----------+
+| name    | key1  | val       |
++---------+-------+-----------+
+| Ram     | City  | Bangalore |
+| Ram     | Age   | 27        |
+| Ram     | Title | Analyst   |
+| Ashok   | City  | Delhi     |
+| Ashok   | Age   | 35        |
+| Krishna | City  | Mumbai    |
+| Krishna | Age   | 22        |
+| Ashok   | Title | Engineer  |
++---------+-------+-----------+
+Output table:
++---------+-----+-----------+----------+
+| Name    | Age | City      | Title    |
++---------+-----+-----------+----------+
+| Ram     | 27  | Bangalore | Analyst  |
+| Ashok   | 35  | Delhi     | Engineer |
+| Krishna | 22  | Mumbai    | NULL     |
++---------+-----+-----------+----------+
+
+Query:
+select c.name as Name,c.age_val as Age,c.city_val as City,d.val as Title from (select a.name,a.key1 as city,a.val as city_val,b.key1 as age,b.val as age_val from keyval a INNER JOIN keyval b ON a.name = b.name and a.key1='City' and b.key1='Age') as c LEFT JOIN keyval as d ON c.name=d.name and d.key1='Title';
+
+---------------------------------------------------------------------------
+LinkedIN
+
+Q) write code for k-means algo in c++?(where does k-means does not work and drawback of kmeans).
+
+Q)Given k and array A ,divide A into k partition with each partition have same sum?
+
+Q)Why LSTM does not have vanishing gradient problem (math behind it) ?
+
+Q)there are some Red and blue balls in a bag ,we take 1 ball from bag and replace it and we repeat this process n times. what is the prob of seeing k red balls after n iteration? 
+
+Q)A biased coin with head prob p,make use of this coin to create a fair dice?(Hint:first create unbiased coin from this biased coin)
+
+Q)why logistic regression is same as principle of maximum entropy?
+
+Q)N people are standing in a line at some random distance from each other ,we need to find a point where all of them can meet with sum of displacement of each person is minimum? i.e for all i (1 to N) miminize{summation(|x_i - x_e|)} where x_e is a point where everybody meet?(Hint:can use second norm instead first norm and then differentiate wrt x_e and find value of x_e)
+
+Q)Lot of question on logistic regression (convergence etcetre) 
+
+Q)there are N players ,we need to rank these N player by making them play game with each other (In Default ranking setting A player say x play game with all N-1 players and based on that ranking of x is defined) But in this setting we have to reduce no. of games play based on the fact that let y looses to z and x loosed to y then x will loosed to y ?
+
+Q)New tab with recommendation of company interest for linked profile need to be added?(Design problem)
+-------------------------------------------------------------------------
+CodeNation
+Q)Given N nubers in array ,we need to find a pair of numbers such that when we perform their individual digits modulo 10 sum the result is maximum?ex (1234+797=1921) (Hint solve using Trie)
+342,896,1234,797,1024,14,135
+
+Q)N Currency exchange rate are given in matrix and matix is some what symmetric means 1 US$ = 67 INR then 1 INR = (1/67) US$.then find the coversion c1-c2-c3 ... ck-c1 such that it is greater than 1?
+Similar to this pb:https://courses.csail.mit.edu/6.046/spring04/handouts/ps7sol.pdf
+
+
+Q)https://www.geeksforgeeks.org/split-array-three-equal-sum-subarrays/
+https://www.geeksforgeeks.org/count-the-number-of-ways-to-divide-an-array-into-three-contiguous-parts-having-equal-sum/
+
+
+
+   
+
+
+

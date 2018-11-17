@@ -1,0 +1,97 @@
+sudo arp-scan --interface=eth0 --localnet       ============ List all system connected to Your LAN
+ssh sauravshri@mars.cse.iitb.ac.in              ============ Connect to mars system(ssh root@<IP>)
+ssh saurav@10.129.146.121
+scp ex1.c saurav@10.15.24.163:Desktop/          ============Transfer file(scp -r <file> <username>@<IP address or hostname>:<Destination>)
+scp Model.tar.gz saurav@10.129.146.121:Desktop/
+------------------------------------------------------------------------------------------
+sound icon missing:
+sudo apt-get install indicator-sound
+killall unity-panel-service
+killall gnome-panel
+
+sudo apt-add-repository ppa:ubuntu-audio-dev/alsa-daily
+sudo apt-get update
+sudo apt-get install oem-audio-hda-daily-lts-vivid-dkms
+sudo aptitude --purge reinstall linux-sound-base alsa-base alsa-utils linux-image-`uname -r` linux-ubuntu-modules-`uname -r` libasound2
+https://help.ubuntu.com/community/SoundTroubleshootingProcedure             --- For more troubleshooting
+------------------------------------------------------------------------------------------
+sudo service network-manager restart                ====== restart network
+sshfs narayan@10.129.26.44: /home/saurav/remote_server
+sudo umount remote_server myip:10.14.12.73
+
+sudo mkdir /mnt/remote_data
+du -sh /mnt/remote_data
+sudo sshfs -o allow_other saurav@10.129.146.121:Desktop/Raga\ Recognition/ /mnt/remote_data/
+du -sh /mnt/remote_data
+ls -l /mnt/remote_data
+df -h
+sudo umount /mnt/remote_data
+------------------------------------------------------------------------------------------
+lame -V2 input.wav output.mp3
+ffmpeg -i input.mp3 output.wav
+------------------------------------------------------------------------------------------
+sudo nc -l -p 80 -----------------------create a local(-l) TCP server on port(-p) 80
+nc localhost 80 -------------------------create a TCP client and connnect to listening server at ip<localhost> at port 80
+nc -l 1234 > file.pdf ----------------------create a TCP server on localhost at port 1234 and dump o/p to file.pdf
+nc <ip-address> 1234 < filein.pdf ---------create tcp client and send filein.pdf to server running at ip <ip-address> on port 1234
+------------------------------------------------------------------------------------------
+In case of lock aquire by any process
+ps aux | grep apt --- to check all apt process
+sudo rm /var/lib/apt/lists/lock -----delete the lock file 
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock
+------------------------------------------------------------------------------------------
+To start openvpn : sudo systemctl start openvpn@iitbvpn.service
+To check openvpn is up or not? : ifconfif then check tap interface is up or not
+To stop openvpn : sudo systemctl stop openvpn@iitbvpn.service 
+
+------------------------------------------------------------------------------------------
+source ~/tensorflow/bin/activate
+tensorboard --logdir=./summary_log/
+------------------------------------------------------------------------------------------
+tmux tutorial:
+
+man tmux -----see all key binding all command start with (ctrl+b)
+tmux new -s myname
+tmux -S <session name> ---- create session name
+tmux -list sessions or tmux ls --------- list all session in tmux   
+tmux attach -t <session_name> or tmux a -t myname-----attach to session with session_name eg tmux attach -t 3
+tmux (ctlr+b)+: then write kill-session or tmux kill-session -t myname -----to close pane or come out of current session
+
+Windows: hit ctrl+b then 
+c  create window
+w  list windows
+n  next windowl
+l  previous window
+f  find window
+,  rename window
+&  kill window
+Panes: hit ctrl+b then
+%  vertical split
+"  horizontal split
+o  swap panes
+q  show pane numbers
+x  kill pane
+--------------------------------------------------------------------------------------------
+find 'pattern' in all files present in path :/path/to/somewhere/
+grep -rnw '/path/to/somewhere/' -e 'pattern'
+-r or -R is recursive,
+-n is line number, and
+-w stands for match the whole word.
+-l (lower-case L) can be added to just give the file name of matching files.
+--------------------------------------------------------------------------------------------
+mysql:
+start mysql(password is tiger):  mysql -u root -p
+show databases;
+use <dbname>
+show <table name>
+
+
+
+
+
+ 
+
+  
+
+
