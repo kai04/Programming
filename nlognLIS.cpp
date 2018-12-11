@@ -1,5 +1,6 @@
 //LIS in O(nlogn)
 //https://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/
+//https://leetcode.com/problems/longest-increasing-subsequence/
 #include <bits/stdc++.h>
 using namespace std;
 // Binary search (note boundaries in the caller) 
@@ -15,7 +16,36 @@ int CeilIndex(std::vector<int>& v, int l, int r, int key)
   
     return r; 
 } 
-  
+
+int lengthOfLIS(vector<int>& nums) {
+        if(nums.size()<=1)
+            return nums.size();
+        int len=1;
+        vector<int> lis;
+        lis.push_back(nums[0]);
+        for(int i=1;i<nums.size();i++){
+            if(nums[i]<=lis[0]){
+                lis[0]=nums[i];
+            }
+            else if(nums[i]>lis[lis.size()-1]){
+                lis.push_back(nums[i]);
+                len++;
+            }
+            else{
+                //int x=ceilIndex(lis,nums[i]);
+                auto x1 =upper_bound(lis.begin(),lis.end(),nums[i]);
+                *x1=nums[i];
+            }
+
+        }
+        int ans=1;
+        for(int i=1;i<lis.size();i++){
+            if(lis[i]!=lis[i-1])
+                ans++;
+        }
+        return ans;
+    }
+
 int LongestIncreasingSubsequenceLength(std::vector<int>& v) 
 { 
     if (v.size() == 0) 

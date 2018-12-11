@@ -25,9 +25,9 @@ int main() {
                     ma[s.top()]=a[i];
                     s.pop();
                 }
-                if(s.size()==0){
+                // if(s.size()==0){
                     s.push(a[i]);
-                }
+                // }
         }
         while(!s.empty()){
             ma[s.top()]=-1;
