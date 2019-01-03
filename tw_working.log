@@ -1,0 +1,730 @@
+2018/12/28 10:40:28.199| comm_read_try: FD 15, size 4095, retval 577, errno 0
+2018/12/28 10:40:28.199| commio_finish_callback: called for FD 15 (0, 0)
+2018/12/28 10:40:28.199| parseHttpRequest: req_hdr = {Host: api.twitter.com
+Origin: https://mobile.twitter.com
+Access-Control-Request-Method: POST
+Content-Length: 0
+Access-Control-Request-Headers: authorization,x-csrf-token,x-twitter-active-user,x-twitter-auth-type,x-twitter-client-language
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1
+Referer: https://mobile.twitter.com/compose/tweet
+Accept-Language: en-us
+Accept-Encoding: br, gzip, deflate
+
+}
+2018/12/28 10:40:28.199| parseHttpRequest: end = {
+}
+2018/12/28 10:40:28.199| parseHttpRequest: prefix_sz = 577, req_line_sz = 44
+2018/12/28 10:40:28.199| clientStreamInsertHead: Inserted node 0x2023ab8 with data 0x2042cd0 after head
+2018/12/28 10:40:28.199| comm.cc(1211) commSetTimeout: FD 15 timeout 86400
+2018/12/28 10:40:28.199| comm.cc(1222) commSetTimeout: FD 15 timeout 86400
+2018/12/28 10:40:28.199| =======================================================================
+2018/12/28 10:40:28.199| securly_hook_urlParse url = |https://api.twitter.com/1.1/statuses/update.json|
+2018/12/28 10:40:28.199| securly_hook_urlParse direct proxy request 
+2018/12/28 10:40:28.199| urlParse: Split URL 'https://api.twitter.com/1.1/statuses/update.json' into proto='https', host='api.twitter.com', port='443', path='/1.1/statuses/update.json'
+2018/12/28 10:40:28.199| securly_hook_urlParseFinish url = /1.1/statuses/update.json
+2018/12/28 10:40:28.199| clientSetKeepaliveFlag: http_ver = 1.1
+2018/12/28 10:40:28.199| clientSetKeepaliveFlag: method = OPTIONS
+2018/12/28 10:40:28.199| client_side_request.cc(142) ClientRequestContext: 0x1fcf5a8 ClientRequestContext constructed
+2018/12/28 10:40:28.199| client_side_request.cc(1359) doCallouts: Doing calloutContext->clientAccessCheck()
+2018/12/28 10:40:28.199| ACLChecklist::preCheck: 0x1fedec8 checking 'http_access allow manager localhost'
+2018/12/28 10:40:28.199| ACLList::matches: checking manager
+2018/12/28 10:40:28.199| ACL::checklistMatches: checking 'manager'
+2018/12/28 10:40:28.199| aclRegexData::match: checking 'api.twitter.com:443'
+2018/12/28 10:40:28.199| aclRegexData::match: looking for '^cache_object://'
+2018/12/28 10:40:28.199| aclRegexData::match: looking for '/squid-internal-mgr/'
+2018/12/28 10:40:28.199| ACL::ChecklistMatches: result for 'manager' is 0
+2018/12/28 10:40:28.199| aclmatchAclList: 0x1fedec8 returning false (AND list entry failed to match)
+2018/12/28 10:40:28.199| aclmatchAclList: async=0 nodeMatched=0 async_in_progress=0 lastACLResult() = 0 finished() = 0
+2018/12/28 10:40:28.199| ACLChecklist::preCheck: 0x1fedec8 checking 'http_access deny manager'
+2018/12/28 10:40:28.199| ACLList::matches: checking manager
+2018/12/28 10:40:28.199| ACL::checklistMatches: checking 'manager'
+2018/12/28 10:40:28.199| aclRegexData::match: checking 'api.twitter.com:443'
+2018/12/28 10:40:28.199| aclRegexData::match: looking for '^cache_object://'
+2018/12/28 10:40:28.199| aclRegexData::match: looking for '/squid-internal-mgr/'
+2018/12/28 10:40:28.199| ACL::ChecklistMatches: result for 'manager' is 0
+2018/12/28 10:40:28.199| aclmatchAclList: 0x1fedec8 returning false (AND list entry failed to match)
+2018/12/28 10:40:28.199| aclmatchAclList: async=0 nodeMatched=0 async_in_progress=0 lastACLResult() = 0 finished() = 0
+2018/12/28 10:40:28.199| ACLChecklist::preCheck: 0x1fedec8 checking 'http_access deny CONNECT !SSL_ports'
+2018/12/28 10:40:28.199| ACLList::matches: checking CONNECT
+2018/12/28 10:40:28.200| ACL::checklistMatches: checking 'CONNECT'
+2018/12/28 10:40:28.200| ACL::ChecklistMatches: result for 'CONNECT' is 0
+2018/12/28 10:40:28.200| aclmatchAclList: 0x1fedec8 returning false (AND list entry failed to match)
+2018/12/28 10:40:28.200| aclmatchAclList: async=0 nodeMatched=0 async_in_progress=0 lastACLResult() = 0 finished() = 0
+2018/12/28 10:40:28.200| ACLChecklist::preCheck: 0x1fedec8 checking 'http_access deny !Safe_ports'
+2018/12/28 10:40:28.200| ACLList::matches: checking !Safe_ports
+2018/12/28 10:40:28.200| ACL::checklistMatches: checking 'Safe_ports'
+2018/12/28 10:40:28.200| ACL::ChecklistMatches: result for 'Safe_ports' is 1
+2018/12/28 10:40:28.200| aclmatchAclList: 0x1fedec8 returning false (AND list entry failed to match)
+2018/12/28 10:40:28.200| aclmatchAclList: async=0 nodeMatched=0 async_in_progress=0 lastACLResult() = 0 finished() = 0
+2018/12/28 10:40:28.200| ACLChecklist::preCheck: 0x1fedec8 checking 'http_access allow all'
+2018/12/28 10:40:28.200| ACLList::matches: checking all
+2018/12/28 10:40:28.200| ACL::checklistMatches: checking 'all'
+2018/12/28 10:40:28.200| aclIpMatchIp: '49.248.110.30:30279' found
+2018/12/28 10:40:28.200| ACL::ChecklistMatches: result for 'all' is 1
+2018/12/28 10:40:28.200| aclmatchAclList: 0x1fedec8 returning true (AND list satisfied)
+2018/12/28 10:40:28.200| ACLChecklist::markFinished: 0x1fedec8 checklist processing finished
+2018/12/28 10:40:28.200| ACLChecklist::check: 0x1fedec8 match found, calling back with 1
+2018/12/28 10:40:28.200| ACLChecklist::checkCallback: 0x1fedec8 answer=1
+2018/12/28 10:40:28.201| The request OPTIONS https://api.twitter.com/1.1/statuses/update.json is ALLOWED, because it matched 'all'
+2018/12/28 10:40:28.201| client_side_request.cc(1388) doCallouts: Doing calloutContext->clientAccessCheck2()
+2018/12/28 10:40:28.201| client_side_request.cc(556) clientAccessCheck2: No adapted_http_access configuration.
+2018/12/28 10:40:28.201| The request OPTIONS api.twitter.com:443 is ALLOWED, because it matched 'all'
+2018/12/28 10:40:28.201| client_side_request.cc(1395) doCallouts: Doing clientInterpretRequestHeaders()
+2018/12/28 10:40:28.201| ------------------------ BEGIN CLASSIFICATION PHASE -------------------
+2018/12/28 10:40:28.201| OPTIONS
+2018/12/28 10:40:28.201| redis connect HTTP
+2018/12/28 10:40:28.201| saurav@headerHost:api.twitter.com
+2018/12/28 10:40:28.201| in securlyhook_clientInterpretRequestHeaders, urlpath is |/1.1/statuses/update.json|
+2018/12/28 10:40:28.201| querystring GET 49.248.110.30
+2018/12/28 10:40:28.201| Got IP in DB0 for fidadmin@securlyqa1.com
+2018/12/28 10:40:28.201| querystring SISMEMBER admin@securlyqa1.com 49.248.110.30
+2018/12/28 10:40:28.201| in getBrokerHashFromUrl, url =  |/1.1/statuses/update.json|
+2018/12/28 10:40:28.201| getBrokerHashFromUrl, hash IS  NULL, returning false 
+2018/12/28 10:40:28.201| inside checkCAPTCHA
+2018/12/28 10:40:28.201| getGlobalActions action_num_global GET admin@securlyqa1.com
+2018/12/28 10:40:28.201| getPNVector PN Vector: GET admin@securlyqa1.com:PN
+2018/12/28 10:40:28.201| getNormalizedDomain hoststring = api.twitter.com normalizedDomain = api.twitter.com
+2018/12/28 10:40:28.201| isReducedTraffic normalized host: api.twitter.com, url path: /1.1/statuses/update.json
+2018/12/28 10:40:28.201| subdomain = com
+2018/12/28 10:40:28.201| isReducedTraffic request isProxy is true
+2018/12/28 10:40:28.201| isReducedTraffic return false because of domain in db 16 or black / white list
+2018/12/28 10:40:28.201| after googlePerf, host: api.twitter.com, path: /1.1/statuses/update.json
+2018/12/28 10:40:28.201| sstate.normalizedDomain api.twitter.com
+2018/12/28 10:40:28.201| extractKeywords extractKeywords, url = |/1.1/statuses/update.json|
+2018/12/28 10:40:28.201| brokerHash is lowpriv
+2018/12/28 10:40:28.201| here1 api.twitter.com
+2018/12/28 10:40:28.201| in setRequestTypes, domain is api.twitter.comcategory id is 0000000000000000000000000000000000000000000000000010000000000000
+2018/12/28 10:40:28.201| getPolicyNum Querystring SISMEMBER admin@securlyqa1.com 49.248.110.30
+2018/12/28 10:40:28.201| getPolicyNum IP policy lookup GET admin@securlyqa1.com:gn:49.248.110.30
+2018/12/28 10:40:28.201| getPolicyNum IP policy lookup GET admin@securlyqa1.com:ip:49.248.110.30
+2018/12/28 10:40:28.201| getPolicyNum querystring EXISTS admin@securlyqa1.com:time 0
+2018/12/28 10:40:28.201| getPolicyNum OU name: NULL
+2018/12/28 10:40:28.201| getPolicyActions fid:policy_num GET admin@securlyqa1.com:0
+2018/12/28 10:40:28.201| getPolicyActions action_num_union GET admin@securlyqa1.com:union
+2018/12/28 10:40:28.201| getPolicyActions action_num_intersection GET admin@securlyqa1.com:intersection
+2018/12/28 10:40:28.201| Do we need to turn on SSL Bump?
+2018/12/28 10:40:28.201| HDR_HOST api.twitter.com
+2018/12/28 10:40:28.201| Turning on SSL Bump for this flow
+2018/12/28 10:40:28.201| in getBlockLevels
+2018/12/28 10:40:28.201| in getBlockLevels, request not NULL
+2018/12/28 10:40:28.201| in getBlockLevels, action_num_out = 0000000000000000000000000000000000000000000000000100000001111010
+2018/12/28 10:40:28.201| in getBlockLevels, category id 8192
+2018/12/28 10:40:28.201| for naperville, whole URL: api.twitter.com/1.1/statuses/update.json
+2018/12/28 10:40:28.201| for naperville, whole URL: api.twitter.com/1.1/statuses/update.json
+2018/12/28 10:40:28.201| for special wildcard match, whole URL: api.twitter.com/1.1/statuses/update.json, keyword: agar
+2018/12/28 10:40:28.201| for special wildcard match, query string: SISMEMBER admin@securlyqa1.com:whitewildcards *agar*
+2018/12/28 10:40:28.201| for special wildcard match, keyword NOT matched, url: api.twitter.com/1.1/statuses/update.json, keyword: agar
+2018/12/28 10:40:28.201| for special wildcard match, whole URL: api.twitter.com/1.1/statuses/update.json, keyword: unblockedgames
+2018/12/28 10:40:28.201| for special wildcard match, query string: SISMEMBER admin@securlyqa1.com:whitewildcards *unblockedgames*
+2018/12/28 10:40:28.201| for special wildcard match, keyword NOT matched, url: api.twitter.com/1.1/statuses/update.json, keyword: unblockedgames
+2018/12/28 10:40:28.201| for special wildcard match, whole URL: api.twitter.com/1.1/statuses/update.json, keyword: agar
+2018/12/28 10:40:28.201| for special wildcard match, query string: SISMEMBER admin@securlyqa1.com:blackwildcards *agar*
+2018/12/28 10:40:28.201| for special wildcard match, keyword NOT matched, url: api.twitter.com/1.1/statuses/update.json, keyword: agar
+2018/12/28 10:40:28.201| for special wildcard match, whole URL: api.twitter.com/1.1/statuses/update.json, keyword: unblockedgames
+2018/12/28 10:40:28.201| for special wildcard match, query string: SISMEMBER admin@securlyqa1.com:blackwildcards *unblockedgames*
+2018/12/28 10:40:28.201| for special wildcard match, keyword NOT matched, url: api.twitter.com/1.1/statuses/update.json, keyword: unblockedgames
+2018/12/28 10:40:28.201| needToBroker normalized domain api.twitter.com, url path /1.1/statuses/update.json
+2018/12/28 10:40:28.201| needToBroker Referer:https://mobile.twitter.com/compose/tweet, normalized domain api.twitter.com
+2018/12/28 10:40:28.201| needToBroker URL printed here /1.1/statuses/update.json
+2018/12/28 10:40:28.201| needToBroker no need to broker api of twitter
+2018/12/28 10:40:28.201| needToBroker returned no need to broker which means we do not need to block either
+2018/12/28 10:40:28.201| securlyhook_clientInterpretRequestHeaders  blocklevels = 0
+2018/12/28 10:40:28.201| securlyhook_clientInterpretRequestHeaders entering doRequestTransforms
+2018/12/28 10:40:28.201| doRequestTransforms domain = api.twitter.com
+2018/12/28 10:40:28.201| doRequestTransforms blocklevels = 0
+2018/12/28 10:40:28.201| doRequestTransforms requestType = 8192
+2018/12/28 10:40:28.201| dumpRequest --- DUMPING OUTBOUND REQUEST BEGIN ---
+2018/12/28 10:40:28.201|     OPTIONS /1.1/statuses/update.json
+2018/12/28 10:40:28.201|     Host:api.twitter.com
+2018/12/28 10:40:28.201|     Origin:https://mobile.twitter.com
+2018/12/28 10:40:28.201|     Access-Control-Request-Method:POST
+2018/12/28 10:40:28.201|     Content-Length:0
+2018/12/28 10:40:28.201|     Access-Control-Request-Headers:authorization,x-csrf-token,x-twitter-active-user,x-twitter-auth-type,x-twitter-client-language
+2018/12/28 10:40:28.201|     Connection:keep-alive
+2018/12/28 10:40:28.201|     Accept:*/*
+2018/12/28 10:40:28.201|     User-Agent:Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1
+2018/12/28 10:40:28.201|     Referer:https://mobile.twitter.com/compose/tweet
+2018/12/28 10:40:28.201|     Accept-Language:en-us
+2018/12/28 10:40:28.201|     Accept-Encoding:br, gzip, deflate
+2018/12/28 10:40:28.201| dumpRequest --- DUMPING OUTBOUND REQUEST END   ---
+2018/12/28 10:40:28.201| redis disconnect HTTP
+2018/12/28 10:40:28.201| here3
+2018/12/28 10:40:28.225| client_side_request.cc(1404) doCallouts: Doing calloutContext->checkNoCache()
+2018/12/28 10:40:28.225| ACLChecklist::preCheck: 0x2043c18 checking 'cache deny all'
+2018/12/28 10:40:28.225| ACLList::matches: checking all
+2018/12/28 10:40:28.225| ACL::checklistMatches: checking 'all'
+2018/12/28 10:40:28.234| aclIpMatchIp: '49.248.110.30:30279' found
+2018/12/28 10:40:28.234| ACL::ChecklistMatches: result for 'all' is 1
+2018/12/28 10:40:28.234| aclmatchAclList: 0x2043c18 returning true (AND list satisfied)
+2018/12/28 10:40:28.234| ACLChecklist::markFinished: 0x2043c18 checklist processing finished
+2018/12/28 10:40:28.234| ACLChecklist::check: 0x2043c18 match found, calling back with 0
+2018/12/28 10:40:28.234| ACLChecklist::checkCallback: 0x2043c18 answer=0
+2018/12/28 10:40:28.234| client_side_request.cc(1230) sslBumpNeeded: sslBump required: No
+2018/12/28 10:40:28.235| client_side_request.cc(130) ~ClientRequestContext: 0x1fcf5a8 ClientRequestContext destructed
+2018/12/28 10:40:28.235| client_side_request.cc(1439) doCallouts: calling processRequest()
+2018/12/28 10:40:28.235| clientStreamRead: Calling 1 with cbdata 0x207a5f8 from node 0x2023ab8
+2018/12/28 10:40:28.235| clientProcessRequest2: StoreEntry is NULL -  MISS
+2018/12/28 10:40:28.235| storeCreateEntry: 'api.twitter.com:443'
+2018/12/28 10:40:28.235| store.cc(358) StoreEntry: new StoreEntry 0x2054e90
+2018/12/28 10:40:28.235| MemObject.cc(76) MemObject: new MemObject 0x1feab40
+2018/12/28 10:40:28.235| storeKeyPrivate: OPTIONS api.twitter.com:443
+2018/12/28 10:40:28.236| StoreEntry::hashInsert: Inserting Entry 0x2054e90 key '7EB21C1483995A1C575D6B7805E4A5A0'
+2018/12/28 10:40:28.236| StoreEntry::setReleaseFlag: '7EB21C1483995A1C575D6B7805E4A5A0'
+2018/12/28 10:40:28.236| store_client::copy: 7EB21C1483995A1C575D6B7805E4A5A0, from 0, for length 4096, cb 1, cbdata 0x2079548
+2018/12/28 10:40:28.236| storeClientCopy2: 7EB21C1483995A1C575D6B7805E4A5A0
+2018/12/28 10:40:28.236| store_client::doCopy: Waiting for more
+2018/12/28 10:40:28.236| ------------------------ BEGIN MANIPULATION PHASE ---------------------
+2018/12/28 10:40:28.236| securlyhook_processMiss blocklevels = 0000000000000000000000000000000000000000000000000000000000000000
+2018/12/28 10:40:28.236| securlyhook_processMiss port = 443
+2018/12/28 10:40:28.237| ACLList::matches: checking all
+2018/12/28 10:40:28.237| ACL::checklistMatches: checking 'all'
+2018/12/28 10:40:28.237| aclIpMatchIp: '49.248.110.30:30279' found
+2018/12/28 10:40:28.237| ACL::ChecklistMatches: result for 'all' is 1
+2018/12/28 10:40:28.237| aclmatchAclList: 0x7ffd01e7a390 returning true (AND list satisfied)
+2018/12/28 10:40:28.237| ACLChecklist::markFinished: 0x7ffd01e7a390 checklist processing finished
+2018/12/28 10:40:28.237| FwdState::start() 'api.twitter.com:443'
+2018/12/28 10:40:28.237| StoreEntry::lock: key '7EB21C1483995A1C575D6B7805E4A5A0' count=2
+2018/12/28 10:40:28.237| peerSelect: api.twitter.com:443
+2018/12/28 10:40:28.238| StoreEntry::lock: key '7EB21C1483995A1C575D6B7805E4A5A0' count=3
+2018/12/28 10:40:28.238| peerSelectFoo: 'OPTIONS api.twitter.com'
+2018/12/28 10:40:28.238| ACLChecklist::preCheck: 0x20c89d8 checking 'always_direct allow all'
+2018/12/28 10:40:28.238| ACLList::matches: checking all
+2018/12/28 10:40:28.238| ACL::checklistMatches: checking 'all'
+2018/12/28 10:40:28.238| aclIpMatchIp: '49.248.110.30:30279' found
+2018/12/28 10:40:28.238| ACL::ChecklistMatches: result for 'all' is 1
+2018/12/28 10:40:28.238| aclmatchAclList: 0x20c89d8 returning true (AND list satisfied)
+2018/12/28 10:40:28.239| ACLChecklist::markFinished: 0x20c89d8 checklist processing finished
+2018/12/28 10:40:28.239| ACLChecklist::check: 0x20c89d8 match found, calling back with 1
+2018/12/28 10:40:28.239| ACLChecklist::checkCallback: 0x20c89d8 answer=1
+2018/12/28 10:40:28.239| peerCheckAlwaysDirectDone: 1
+2018/12/28 10:40:28.239| peerSelectFoo: 'OPTIONS api.twitter.com'
+2018/12/28 10:40:28.239| peerSelectFoo: direct = DIRECT_YES
+2018/12/28 10:40:28.239| peerSelectCallback: api.twitter.com:443
+2018/12/28 10:40:28.239| fwdStartComplete: api.twitter.com:443
+2018/12/28 10:40:28.239| fwdConnectStart: api.twitter.com:443
+2018/12/28 10:40:28.240| PconnPool::pop: found api.twitter.com:443(to use)
+2018/12/28 10:40:28.240| commio_cancel_callback: called for FD 30
+2018/12/28 10:40:28.240| comm.cc(1211) commSetTimeout: FD 30 timeout -1
+2018/12/28 10:40:28.240| comm.cc(1222) commSetTimeout: FD 30 timeout -1
+2018/12/28 10:40:28.240| IdleConnList::removeFD: found FD 30 at index 1
+2018/12/28 10:40:28.240| fwdConnectStart: reusing pconn FD 30
+2018/12/28 10:40:28.240| fwdDispatch: FD 15: Fetching 'OPTIONS api.twitter.com:443'
+2018/12/28 10:40:28.240| httpStart: "OPTIONS api.twitter.com:443"
+2018/12/28 10:40:28.241| StoreEntry::lock: key '7EB21C1483995A1C575D6B7805E4A5A0' count=4
+2018/12/28 10:40:28.241| comm.cc(1222) commSetTimeout: FD 30 timeout 86400
+2018/12/28 10:40:28.241| getMaxAge: 'api.twitter.com:443'
+2018/12/28 10:40:28.241| StoreEntry::unlock: key '7EB21C1483995A1C575D6B7805E4A5A0' count=3
+2018/12/28 10:40:28.241| commio_finish_callback: called for FD 30 (0, 0)
+2018/12/28 10:40:28.241| comm.cc(1222) commSetTimeout: FD 30 timeout 900
+2018/12/28 10:40:28.265| comm_read_try: FD 30, size 16383, retval 755, errno 0
+2018/12/28 10:40:28.265| commio_finish_callback: called for FD 30 (0, 0)
+2018/12/28 10:40:28.265| ctx: enter level  0: 'api.twitter.com:443'
+2018/12/28 10:40:28.265| processReplyHeader: key '7EB21C1483995A1C575D6B7805E4A5A0'
+2018/12/28 10:40:28.265| ctx: exit level  0
+2018/12/28 10:40:28.266| StoreEntry::replaceHttpReply: api.twitter.com:443
+2018/12/28 10:40:28.266| InvokeHandlers: 7EB21C1483995A1C575D6B7805E4A5A0
+2018/12/28 10:40:28.266| StoreEntry::InvokeHandlers: checking client #0
+2018/12/28 10:40:28.266| ctx: enter level  0: 'api.twitter.com:443'
+2018/12/28 10:40:28.266| haveParsedReplyHeaders: HTTP CODE: 200
+2018/12/28 10:40:28.266| ------------------------ BEGIN RESPONSE PROCESSING PHASE --------------
+2018/12/28 10:40:28.266| securlyhook_processReply Enter
+2018/12/28 10:40:28.266| redis connect HTTP
+2018/12/28 10:40:28.266| securlyhook_processReply Leave
+2018/12/28 10:40:28.267| storeGet: looking up 90D9A31CCFE156DAB03017D75F821E14
+2018/12/28 10:40:28.267| storeGet: looking up B0BE6C1F9FA7140925570A654CC234C3
+2018/12/28 10:40:28.267| httpMakeVaryMark: origin="https%3A%2F%2Fmobile.twitter.com"
+2018/12/28 10:40:28.267| refreshCheck: 'api.twitter.com:443'
+2018/12/28 10:40:28.268| refreshCheck: Matched '<none> 0 20%% 259200'
+2018/12/28 10:40:28.268| 	age:	60
+2018/12/28 10:40:28.268| 	check_time:	Fri, 28 Dec 2018 10:41:28 GMT
+2018/12/28 10:40:28.268| 	entry->timestamp:	Fri, 28 Dec 2018 10:40:28 GMT
+2018/12/28 10:40:28.268| STALE: age 60 >= min 0
+2018/12/28 10:40:28.268| Staleness = 60
+2018/12/28 10:40:28.268| refreshCheck: returning STALE_DEFAULT
+2018/12/28 10:40:28.268| refreshIsCachable() returned non-cacheable..
+2018/12/28 10:40:28.269| StoreEntry::expireNow: '7EB21C1483995A1C575D6B7805E4A5A0'
+2018/12/28 10:40:28.269| ctx: exit level  0
+2018/12/28 10:40:28.269| InvokeHandlers: 7EB21C1483995A1C575D6B7805E4A5A0
+2018/12/28 10:40:28.269| StoreEntry::InvokeHandlers: checking client #0
+2018/12/28 10:40:28.269| storeClientCopy2: 7EB21C1483995A1C575D6B7805E4A5A0
+2018/12/28 10:40:28.269| store_client::doCopy: Copying normal from memory
+2018/12/28 10:40:28.269| The reply for OPTIONS api.twitter.com:443 is ALLOWED, because it matched 'all'
+2018/12/28 10:40:28.270| StoreEntry::lock: key '7EB21C1483995A1C575D6B7805E4A5A0' count=4
+2018/12/28 10:40:28.270| clientReplyContext::sendMoreData: Appending 0 bytes after 755 bytes of headers
+2018/12/28 10:40:28.270| clientStreamCallback: Calling 1 with cbdata 0x2042cd0 from node 0x2024358
+2018/12/28 10:40:28.270| persistentConnStatus: FD 30 eof=0
+2018/12/28 10:40:28.270| comm.cc(1222) commSetTimeout: FD 30 timeout -1
+2018/12/28 10:40:28.270| forward.cc(303) unregister: api.twitter.com:443
+2018/12/28 10:40:28.270| PconnPool::push: found IdleConnList for {api.twitter.com:443}
+2018/12/28 10:40:28.270| comm.cc(1211) commSetTimeout: FD 30 timeout 60
+2018/12/28 10:40:28.271| comm.cc(1222) commSetTimeout: FD 30 timeout 60
+2018/12/28 10:40:28.271| PconnPool::push: pushed FD 30 for api.twitter.com:443
+2018/12/28 10:40:28.271| forward.cc(321) complete: api.twitter.com:443
+	status 200
+2018/12/28 10:40:28.271| fwdReforward: api.twitter.com:443?
+2018/12/28 10:40:28.271| fwdReforward: No, ENTRY_FWD_HDR_WAIT isn't set
+2018/12/28 10:40:28.271| fwdComplete: server FD -1 not re-forwarding status 200
+2018/12/28 10:40:28.271| storeComplete: '7EB21C1483995A1C575D6B7805E4A5A0'
+2018/12/28 10:40:28.271| storeEntryValidLength: Checking '7EB21C1483995A1C575D6B7805E4A5A0'
+2018/12/28 10:40:28.272| InvokeHandlers: 7EB21C1483995A1C575D6B7805E4A5A0
+2018/12/28 10:40:28.272| StoreEntry::InvokeHandlers: checking client #0
+2018/12/28 10:40:28.272| storePendingNClients: returning 1
+2018/12/28 10:40:28.272| Server.cc(228) quitIfAllDone: transaction done
+2018/12/28 10:40:28.272| StoreEntry::unlock: key '7EB21C1483995A1C575D6B7805E4A5A0' count=3
+2018/12/28 10:40:28.272| forward.cc(164) ~FwdState: FwdState destructor starting
+2018/12/28 10:40:28.272| StoreEntry::unlock: key '7EB21C1483995A1C575D6B7805E4A5A0' count=2
+2018/12/28 10:40:28.272| forward.cc(193) ~FwdState: FwdState destructor done
+2018/12/28 10:40:28.273| commio_finish_callback: called for FD 15 (0, 0)
+2018/12/28 10:40:28.273| client_side_reply.cc(1042) storeOKTransferDone: storeOKTransferDone  out.offset=0 objectLen()=755 headers_sz=755
+2018/12/28 10:40:28.273| ClientSocketContext::keepaliveNextRequest: FD 15
+2018/12/28 10:40:28.273| clientStreamDetach: Detaching node 0x2023ab8
+2018/12/28 10:40:28.273| Freeing clientStreamNode 0x2023ab8
+2018/12/28 10:40:28.273| httpRequestFree: api.twitter.com:443
+2018/12/28 10:40:28.273| StoreEntry::unlock: key '7EB21C1483995A1C575D6B7805E4A5A0' count=1
+2018/12/28 10:40:28.273| clientStreamAbort: Aborting stream with tail 0x2024358
+2018/12/28 10:40:28.274| clientStreamDetach: Detaching node 0x2024358
+2018/12/28 10:40:28.274| clientStreamDetach: Calling 1 with cbdata 0x207a5f8
+2018/12/28 10:40:28.274| Freeing clientStreamNode 0x2024358
+2018/12/28 10:40:28.274| storeUnregister: called for '7EB21C1483995A1C575D6B7805E4A5A0'
+2018/12/28 10:40:28.274| storePendingNClients: returning 0
+2018/12/28 10:40:28.274| StoreEntry::unlock: key '7EB21C1483995A1C575D6B7805E4A5A0' count=0
+2018/12/28 10:40:28.274| storePendingNClients: returning 0
+2018/12/28 10:40:28.274| storeRelease: Releasing: '7EB21C1483995A1C575D6B7805E4A5A0'
+2018/12/28 10:40:28.275| store.cc(401) destroyStoreEntry: destroyStoreEntry: destroying 0x2054e98
+2018/12/28 10:40:28.275| store.cc(391) destroyMemObject: destroyMemObject 0x1feab40
+2018/12/28 10:40:28.275| MemObject.cc(97) ~MemObject: del MemObject 0x1feab40
+2018/12/28 10:40:28.275| ClientSocketContext:: FD 15: calling conn->readNextRequest()
+2018/12/28 10:40:28.275| comm.cc(1222) commSetTimeout: FD 15 timeout 120
+2018/12/28 10:40:28.558| comm_read_try: FD 21, size 4095, retval -1, errno 11
+2018/12/28 10:40:28.559| comm_read_try: FD 21, size 4095, retval 2451, errno 0
+2018/12/28 10:40:28.559| commio_finish_callback: called for FD 21 (0, 0)
+2018/12/28 10:40:28.559| parseHttpRequest: req_hdr = {Host: api.twitter.com
+Cookie: _gat=1; _ga=GA1.2.865424804.1545992484; _gid=GA1.2.2019245991.1545992484; _twitter_sess=BAh7CiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7ADoPY3JlYXRlZF9hdGwrCHDIVfRnAToJdXNlcmwr%250ACQCwVCv35skJOgxjc3JmX2lkIiVlYzQ5NGZkZGI3NjU2MTNmZGFlNjU1YTYz%250ANzM1NWFlMjoHaWQiJTZlMWQ4NjU4NDc1ZTRlMWVlM2RlZTE2YzcwNDQzMmNl--f8ab1d4793ae68de2587dc59fe92a5cef564bd1a; ads_prefs="HBESAAA="; auth_token=71f19f609400e6dc1eb3123a385ae2f5ad238753; ct0=cd21a6b4374421c68b781458f06df3f7; dnt=1; kdt=FJr916lzrhs9fZzHQ5Po5S9ZlKmv8MmCcizJOxjg; remember_checked_on=1; twid="u=705348765918474240"; u=56a7beac460e00b1a0d03c254cc5e33e; external_referer=padhuUp37zjaIykqEpRnNX56lLJwBgqHx62t%2BCGMAHWb0D9b9qVsFyeWBFRSKCaGZaSC0huGMdk80EHbMuXIFzfh%2F9RAMItdgmQfAFaS0%2FeDfvkgCyu9yU5dxf%2Fcxv1ODrPROUutJKkkGuYuTlwF3YbCQLT%2FWuLDPWJbAG1Uhe6j5xOzwdAWbulrr%2FLpcCl7a%2BarwBpuASHixs7IeITS56%2FxnwrPWjHdy%2BN18s0ZL9RSOVH66laOK8Qwk5HvKT1FqUc1f0QAXQvAOwGeCvMIKvEEwtz7lcvoJ1ZqoAxXeuVBKjS5voFv%2BsAhvhHmAemnnpHaTI3%2BeUMIXFnioxAoUkH4w2vASc5vvlOJ1IhT4tt%2BmtHY9we5IRXR1s5AwTPuCWQJ06zjgw%2BPbyMGwQ5r%2BJhz9lBRywl7Tv56Ju8OFsc%2BVuUJ8xwzzFKtrQ%2BoKZZWWSP1f3UHVl7NervZidCAhPZ%2FRJ%2B%2FZJQ9D%2FfF5BDw0Pop129RiqetzOcPUSFihO9ZhntCQ7eBn6%2BEUjVSYfz%2FD0bA3jHkPhz6%2Fd3TpUsMJI6RUeEsrDpXUJ4qrhRzb%2BAeYntdxuLN%2BSPNnao4FRJnZSs5E0mIa2O8vAVjxUey8TrKUrnzWbNl%2F4tWL8aenWoZ1fFuFymokcV3NNZHPyV8e6NwkQBM4KBo3ruX6rTeNHTsnTpwbabnhdncl3GSQEB2tD9eXmrDklTq85%2FlhaGNnwPHOYyVxskVJeXRvQRwRhBy4sOhn7QDu%2BWjHRdWhsdjfmVsbQbza2cDODI%2FAXPhBHhpDQtynqiGaKM9KbMc%2BuXVNXb0ijbuO87VbfrI6h4dsVlMfKIAV3ryNRkyscHHYnuS0p4KE53u6ugPsK%2F7Jjw%3D|0|8e8t2xd8A2w%3D; guest_id=v1%3A154599247717611424; personalization_id="v1_y2Dr9dW9b3AKojvutU+okQ=="
+Connection: keep-alive
+Accept: */*
+Authorization: Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA
+x-twitter-client-language: en-GB
+Accept-Language: en-us
+Accept-Encoding: br, gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Origin: https://mobile.twitter.com
+User-Agent: Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1
+Referer: https://mobile.twitter.com/compose/tweet
+DNT: 1
+Content-Length: 449
+x-csrf-token: cd21a6b4374421c68b781458f06df3f7
+x-twitter-auth-type: OAuth2Session
+x-twitter-active-user: yes
+
+}
+2018/12/28 10:40:28.559| parseHttpRequest: end = {
+}
+2018/12/28 10:40:28.559| parseHttpRequest: prefix_sz = 2451, req_line_sz = 41
+2018/12/28 10:40:28.559| clientStreamInsertHead: Inserted node 0x2023ab8 with data 0x2042cd0 after head
+2018/12/28 10:40:28.559| comm.cc(1211) commSetTimeout: FD 21 timeout 86400
+2018/12/28 10:40:28.560| comm.cc(1222) commSetTimeout: FD 21 timeout 86400
+2018/12/28 10:40:28.560| =======================================================================
+2018/12/28 10:40:28.560| securly_hook_urlParse url = |https://api.twitter.com/1.1/statuses/update.json|
+2018/12/28 10:40:28.560| securly_hook_urlParse direct proxy request 
+2018/12/28 10:40:28.560| urlParse: Split URL 'https://api.twitter.com/1.1/statuses/update.json' into proto='https', host='api.twitter.com', port='443', path='/1.1/statuses/update.json'
+2018/12/28 10:40:28.560| securly_hook_urlParseFinish url = /1.1/statuses/update.json
+2018/12/28 10:40:28.560| clientSetKeepaliveFlag: http_ver = 1.1
+2018/12/28 10:40:28.560| clientSetKeepaliveFlag: method = POST
+2018/12/28 10:40:28.560| ClientSocketContext::mayUseConnection: This 0x2041c68 marked 1
+2018/12/28 10:40:28.561| client_side_request.cc(142) ClientRequestContext: 0x1fcf5a8 ClientRequestContext constructed
+2018/12/28 10:40:28.561| client_side_request.cc(1359) doCallouts: Doing calloutContext->clientAccessCheck()
+2018/12/28 10:40:28.561| ACLChecklist::preCheck: 0x1fedec8 checking 'http_access allow manager localhost'
+2018/12/28 10:40:28.561| ACLList::matches: checking manager
+2018/12/28 10:40:28.561| ACL::checklistMatches: checking 'manager'
+2018/12/28 10:40:28.561| aclRegexData::match: checking 'api.twitter.com:443'
+2018/12/28 10:40:28.561| aclRegexData::match: looking for '^cache_object://'
+2018/12/28 10:40:28.562| aclRegexData::match: looking for '/squid-internal-mgr/'
+2018/12/28 10:40:28.562| ACL::ChecklistMatches: result for 'manager' is 0
+2018/12/28 10:40:28.562| aclmatchAclList: 0x1fedec8 returning false (AND list entry failed to match)
+2018/12/28 10:40:28.562| aclmatchAclList: async=0 nodeMatched=0 async_in_progress=0 lastACLResult() = 0 finished() = 0
+2018/12/28 10:40:28.562| ACLChecklist::preCheck: 0x1fedec8 checking 'http_access deny manager'
+2018/12/28 10:40:28.562| ACLList::matches: checking manager
+2018/12/28 10:40:28.562| ACL::checklistMatches: checking 'manager'
+2018/12/28 10:40:28.562| aclRegexData::match: checking 'api.twitter.com:443'
+2018/12/28 10:40:28.562| aclRegexData::match: looking for '^cache_object://'
+2018/12/28 10:40:28.563| aclRegexData::match: looking for '/squid-internal-mgr/'
+2018/12/28 10:40:28.563| ACL::ChecklistMatches: result for 'manager' is 0
+2018/12/28 10:40:28.563| aclmatchAclList: 0x1fedec8 returning false (AND list entry failed to match)
+2018/12/28 10:40:28.563| aclmatchAclList: async=0 nodeMatched=0 async_in_progress=0 lastACLResult() = 0 finished() = 0
+2018/12/28 10:40:28.563| ACLChecklist::preCheck: 0x1fedec8 checking 'http_access deny CONNECT !SSL_ports'
+2018/12/28 10:40:28.563| ACLList::matches: checking CONNECT
+2018/12/28 10:40:28.563| ACL::checklistMatches: checking 'CONNECT'
+2018/12/28 10:40:28.563| ACL::ChecklistMatches: result for 'CONNECT' is 0
+2018/12/28 10:40:28.564| aclmatchAclList: 0x1fedec8 returning false (AND list entry failed to match)
+2018/12/28 10:40:28.564| aclmatchAclList: async=0 nodeMatched=0 async_in_progress=0 lastACLResult() = 0 finished() = 0
+2018/12/28 10:40:28.564| ACLChecklist::preCheck: 0x1fedec8 checking 'http_access deny !Safe_ports'
+2018/12/28 10:40:28.564| ACLList::matches: checking !Safe_ports
+2018/12/28 10:40:28.564| ACL::checklistMatches: checking 'Safe_ports'
+2018/12/28 10:40:28.564| ACL::ChecklistMatches: result for 'Safe_ports' is 1
+2018/12/28 10:40:28.565| aclmatchAclList: 0x1fedec8 returning false (AND list entry failed to match)
+2018/12/28 10:40:28.565| aclmatchAclList: async=0 nodeMatched=0 async_in_progress=0 lastACLResult() = 0 finished() = 0
+2018/12/28 10:40:28.565| ACLChecklist::preCheck: 0x1fedec8 checking 'http_access allow all'
+2018/12/28 10:40:28.565| ACLList::matches: checking all
+2018/12/28 10:40:28.565| ACL::checklistMatches: checking 'all'
+2018/12/28 10:40:28.565| aclIpMatchIp: '49.248.110.30:25078' found
+2018/12/28 10:40:28.565| ACL::ChecklistMatches: result for 'all' is 1
+2018/12/28 10:40:28.565| aclmatchAclList: 0x1fedec8 returning true (AND list satisfied)
+2018/12/28 10:40:28.566| ACLChecklist::markFinished: 0x1fedec8 checklist processing finished
+2018/12/28 10:40:28.566| ACLChecklist::check: 0x1fedec8 match found, calling back with 1
+2018/12/28 10:40:28.566| ACLChecklist::checkCallback: 0x1fedec8 answer=1
+2018/12/28 10:40:28.566| The request POST https://api.twitter.com/1.1/statuses/update.json is ALLOWED, because it matched 'all'
+2018/12/28 10:40:28.566| client_side_request.cc(1388) doCallouts: Doing calloutContext->clientAccessCheck2()
+2018/12/28 10:40:28.566| client_side_request.cc(556) clientAccessCheck2: No adapted_http_access configuration.
+2018/12/28 10:40:28.566| The request POST api.twitter.com:443 is ALLOWED, because it matched 'all'
+2018/12/28 10:40:28.566| client_side_request.cc(1395) doCallouts: Doing clientInterpretRequestHeaders()
+2018/12/28 10:40:28.566| ------------------------ BEGIN CLASSIFICATION PHASE -------------------
+2018/12/28 10:40:28.566| POST
+2018/12/28 10:40:28.566| redis connect HTTP
+2018/12/28 10:40:28.566| saurav@headerHost:api.twitter.com
+2018/12/28 10:40:28.566| in securlyhook_clientInterpretRequestHeaders, urlpath is |/1.1/statuses/update.json|
+2018/12/28 10:40:28.566| querystring GET 49.248.110.30
+2018/12/28 10:40:28.566| Got IP in DB0 for fidadmin@securlyqa1.com
+2018/12/28 10:40:28.566| querystring SISMEMBER admin@securlyqa1.com 49.248.110.30
+2018/12/28 10:40:28.566| in getBrokerHashFromUrl, url =  |/1.1/statuses/update.json|
+2018/12/28 10:40:28.566| getBrokerHashFromUrl, hash IS  NULL, returning false 
+2018/12/28 10:40:28.566| inside checkCAPTCHA
+2018/12/28 10:40:28.566| getGlobalActions action_num_global GET admin@securlyqa1.com
+2018/12/28 10:40:28.566| getPNVector PN Vector: GET admin@securlyqa1.com:PN
+2018/12/28 10:40:28.566| getNormalizedDomain hoststring = api.twitter.com normalizedDomain = api.twitter.com
+2018/12/28 10:40:28.566| isReducedTraffic normalized host: api.twitter.com, url path: /1.1/statuses/update.json
+2018/12/28 10:40:28.566| subdomain = com
+2018/12/28 10:40:28.566| isReducedTraffic request isProxy is true
+2018/12/28 10:40:28.566| isReducedTraffic return false because of domain in db 16 or black / white list
+2018/12/28 10:40:28.566| after googlePerf, host: api.twitter.com, path: /1.1/statuses/update.json
+2018/12/28 10:40:28.566| sstate.normalizedDomain api.twitter.com
+2018/12/28 10:40:28.566| extractKeywords extractKeywords, url = |/1.1/statuses/update.json|
+2018/12/28 10:40:28.566| brokerHash is lowpriv
+2018/12/28 10:40:28.566| here1 api.twitter.com
+2018/12/28 10:40:28.566| in setRequestTypes, domain is api.twitter.comcategory id is 0000000000000000000000000000000000000000000000000010000000000000
+2018/12/28 10:40:28.566| getPolicyNum Querystring SISMEMBER admin@securlyqa1.com 49.248.110.30
+2018/12/28 10:40:28.566| getPolicyNum IP policy lookup GET admin@securlyqa1.com:gn:49.248.110.30
+2018/12/28 10:40:28.566| getPolicyNum IP policy lookup GET admin@securlyqa1.com:ip:49.248.110.30
+2018/12/28 10:40:28.566| getPolicyNum querystring EXISTS admin@securlyqa1.com:time 0
+2018/12/28 10:40:28.566| getPolicyNum OU name: NULL
+2018/12/28 10:40:28.566| getPolicyActions fid:policy_num GET admin@securlyqa1.com:0
+2018/12/28 10:40:28.566| getPolicyActions action_num_union GET admin@securlyqa1.com:union
+2018/12/28 10:40:28.566| getPolicyActions action_num_intersection GET admin@securlyqa1.com:intersection
+2018/12/28 10:40:28.566| Do we need to turn on SSL Bump?
+2018/12/28 10:40:28.566| HDR_HOST api.twitter.com
+2018/12/28 10:40:28.566| Turning on SSL Bump for this flow
+2018/12/28 10:40:28.566| in getBlockLevels
+2018/12/28 10:40:28.566| in getBlockLevels, request not NULL
+2018/12/28 10:40:28.566| in getBlockLevels, action_num_out = 0000000000000000000000000000000000000000000000000100000001111010
+2018/12/28 10:40:28.566| in getBlockLevels, category id 8192
+2018/12/28 10:40:28.566| for naperville, whole URL: api.twitter.com/1.1/statuses/update.json
+2018/12/28 10:40:28.566| for naperville, whole URL: api.twitter.com/1.1/statuses/update.json
+2018/12/28 10:40:28.566| for special wildcard match, whole URL: api.twitter.com/1.1/statuses/update.json, keyword: agar
+2018/12/28 10:40:28.566| for special wildcard match, query string: SISMEMBER admin@securlyqa1.com:whitewildcards *agar*
+2018/12/28 10:40:28.566| for special wildcard match, keyword NOT matched, url: api.twitter.com/1.1/statuses/update.json, keyword: agar
+2018/12/28 10:40:28.566| for special wildcard match, whole URL: api.twitter.com/1.1/statuses/update.json, keyword: unblockedgames
+2018/12/28 10:40:28.566| for special wildcard match, query string: SISMEMBER admin@securlyqa1.com:whitewildcards *unblockedgames*
+2018/12/28 10:40:28.566| for special wildcard match, keyword NOT matched, url: api.twitter.com/1.1/statuses/update.json, keyword: unblockedgames
+2018/12/28 10:40:28.566| for special wildcard match, whole URL: api.twitter.com/1.1/statuses/update.json, keyword: agar
+2018/12/28 10:40:28.566| for special wildcard match, query string: SISMEMBER admin@securlyqa1.com:blackwildcards *agar*
+2018/12/28 10:40:28.566| for special wildcard match, keyword NOT matched, url: api.twitter.com/1.1/statuses/update.json, keyword: agar
+2018/12/28 10:40:28.566| for special wildcard match, whole URL: api.twitter.com/1.1/statuses/update.json, keyword: unblockedgames
+2018/12/28 10:40:28.566| for special wildcard match, query string: SISMEMBER admin@securlyqa1.com:blackwildcards *unblockedgames*
+2018/12/28 10:40:28.566| for special wildcard match, keyword NOT matched, url: api.twitter.com/1.1/statuses/update.json, keyword: unblockedgames
+2018/12/28 10:40:28.566| needToBroker normalized domain api.twitter.com, url path /1.1/statuses/update.json
+2018/12/28 10:40:28.566| needToBroker Do not broker HTTP POST request.
+2018/12/28 10:40:28.566| needToBroker returned no need to broker which means we do not need to block either
+2018/12/28 10:40:28.566| securlyhook_clientInterpretRequestHeaders  blocklevels = 0
+2018/12/28 10:40:28.566| securlyhook_clientInterpretRequestHeaders entering doRequestTransforms
+2018/12/28 10:40:28.566| doRequestTransforms domain = api.twitter.com
+2018/12/28 10:40:28.566| doRequestTransforms blocklevels = 0
+2018/12/28 10:40:28.566| doRequestTransforms requestType = 8192
+2018/12/28 10:40:28.566| dumpRequest --- DUMPING OUTBOUND REQUEST BEGIN ---
+2018/12/28 10:40:28.566|     POST /1.1/statuses/update.json
+2018/12/28 10:40:28.566|     Host:api.twitter.com
+2018/12/28 10:40:28.566|     Cookie:_gat=1; _ga=GA1.2.865424804.1545992484; _gid=GA1.2.2019245991.1545992484; _twitter_sess=BAh7CiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7ADoPY3JlYXRlZF9hdGwrCHDIVfRnAToJdXNlcmwr%250ACQCwVCv35skJOgxjc3JmX2lkIiVlYzQ5NGZkZGI3NjU2MTNmZGFlNjU1YTYz%250ANzM1NWFlMjoHaWQiJTZlMWQ4NjU4NDc1ZTRlMWVlM2RlZTE2YzcwNDQzMmNl--f8ab1d4793ae68de2587dc59fe92a5cef564bd1a; ads_prefs="HBESAAA="; auth_token=71f19f609400e6dc1eb3123a385ae2f5ad238753; ct0=cd21a6b4374421c68b781458f06df3f7; dnt=1; kdt=FJr916lzrhs9fZzHQ5Po5S9ZlKmv8MmCcizJOxjg; remember_checked_on=1; twid="u=705348765918474240"; u=56a7beac460e00b1a0d03c254cc5e33e; external_referer=padhuUp37zjaIykqEpRnNX56lLJwBgqHx62t%2BCGMAHWb0D9b9qVsFyeWBFRSKCaGZaSC0huGMdk80EHbMuXIFzfh%2F9RAMItdgmQfAFaS0%2FeDfvkgCyu9yU5dxf%2Fcxv1ODrPROUutJKkkGuYuTlwF3YbCQLT%2FWuLDPWJbAG1Uhe6j5xOzwdAWbulrr%2FLpcCl7a%2BarwBpuASHixs7IeITS56%2FxnwrPWjHdy%2BN18s0ZL9RSOVH66laOK8Qwk5HvKT1FqUc1f0QAXQvAOwGeCvMIKvEEwtz7lcvoJ1ZqoAxXeuVBKjS5voFv%2BsAhvhHmAemnnpHaTI3%2BeUMIXFnioxAoUkH4w2vASc5vvlOJ1IhT4tt%2BmtHY9we5IRXR1s5AwTPuCWQJ06zjgw%2BPbyMGwQ5r%2BJhz9lBRywl7Tv56Ju8OFsc%2BVuUJ8xwzzFKtrQ%2BoKZZWWSP1f3UHVl7NervZidCAhPZ%2FRJ%2B%2FZJQ9D%2FfF5BDw0Pop129RiqetzOcPUSFihO9ZhntCQ7eBn6%2BEUjVSYfz%2FD0bA3jHkPhz6%2Fd3TpUsMJI6RUeEsrDpXUJ4qrhRzb%2BAeYntdxuLN%2BSPNnao4FRJnZSs5E0mIa2O8vAVjxUey8TrKUrnzWbNl%2F4tWL8aenWoZ1fFuFymokcV3NNZHPyV8e6NwkQBM4KBo3ruX6rTeNHTsnTpwbabnhdncl3GSQEB2tD9eXmrDklTq85%2FlhaGNnwPHOYyVxskVJeXRvQRwRhBy4sOhn7QDu%2BWjHRdWhsdjfmVsbQbza2cDODI%2FAXPhBHhpDQtynqiGaKM9KbMc%2BuXVNXb0ijbuO87VbfrI6h4dsVlMfKIAV3ryNRkyscHHYnuS0p4KE53u6ugPsK%2F7Jjw%3D|0|8e8t2xd8A2w%3D; guest_id=v1%3A154599247717611424; personalization_id="v1_y2Dr9dW9b3AKojvutU+okQ=="
+2018/12/28 10:40:28.566|     Connection:keep-alive
+2018/12/28 10:40:28.566|     Accept:*/*
+2018/12/28 10:40:28.566|     Authorization:Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA
+2018/12/28 10:40:28.566|     x-twitter-client-language:en-GB
+2018/12/28 10:40:28.566|     Accept-Language:en-us
+2018/12/28 10:40:28.566|     Accept-Encoding:br, gzip, deflate
+2018/12/28 10:40:28.566|     Content-Type:application/x-www-form-urlencoded
+2018/12/28 10:40:28.566|     Origin:https://mobile.twitter.com
+2018/12/28 10:40:28.566|     User-Agent:Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1
+2018/12/28 10:40:28.566|     Referer:https://mobile.twitter.com/compose/tweet
+2018/12/28 10:40:28.566|     DNT:1
+2018/12/28 10:40:28.566|     Content-Length:449
+2018/12/28 10:40:28.566|     x-csrf-token:cd21a6b4374421c68b781458f06df3f7
+2018/12/28 10:40:28.566|     x-twitter-auth-type:OAuth2Session
+2018/12/28 10:40:28.566|     x-twitter-active-user:yes
+2018/12/28 10:40:28.566| dumpRequest --- DUMPING OUTBOUND REQUEST END   ---
+2018/12/28 10:40:28.566| redis disconnect HTTP
+2018/12/28 10:40:28.566| here3
+2018/12/28 10:40:28.595| client_side_request.cc(1230) sslBumpNeeded: sslBump required: No
+2018/12/28 10:40:28.595| client_side_request.cc(130) ~ClientRequestContext: 0x1fcf5a8 ClientRequestContext destructed
+2018/12/28 10:40:28.595| client_side_request.cc(1439) doCallouts: calling processRequest()
+2018/12/28 10:40:28.595| clientStreamRead: Calling 1 with cbdata 0x207a5f8 from node 0x2023ab8
+2018/12/28 10:40:28.595| clientProcessRequest2: StoreEntry is NULL -  MISS
+2018/12/28 10:40:28.595| storeCreateEntry: 'api.twitter.com:443'
+2018/12/28 10:40:28.595| store.cc(358) StoreEntry: new StoreEntry 0x2054e90
+2018/12/28 10:40:28.595| MemObject.cc(76) MemObject: new MemObject 0x1feab40
+2018/12/28 10:40:28.595| storeKeyPrivate: POST api.twitter.com:443
+2018/12/28 10:40:28.595| StoreEntry::hashInsert: Inserting Entry 0x2054e90 key '79802DDB9FAAFB859FC17691A044FA29'
+2018/12/28 10:40:28.595| StoreEntry::setReleaseFlag: '79802DDB9FAAFB859FC17691A044FA29'
+2018/12/28 10:40:28.595| store_client::copy: 79802DDB9FAAFB859FC17691A044FA29, from 0, for length 4096, cb 1, cbdata 0x2079548
+2018/12/28 10:40:28.595| storeClientCopy2: 79802DDB9FAAFB859FC17691A044FA29
+2018/12/28 10:40:28.595| store_client::doCopy: Waiting for more
+2018/12/28 10:40:28.595| ------------------------ BEGIN MANIPULATION PHASE ---------------------
+2018/12/28 10:40:28.595| securlyhook_processMiss blocklevels = 0000000000000000000000000000000000000000000000000000000000000000
+2018/12/28 10:40:28.595| securlyhook_processMiss port = 443
+2018/12/28 10:40:28.595| ACLList::matches: checking all
+2018/12/28 10:40:28.595| ACL::checklistMatches: checking 'all'
+2018/12/28 10:40:28.595| aclIpMatchIp: '49.248.110.30:25078' found
+2018/12/28 10:40:28.595| ACL::ChecklistMatches: result for 'all' is 1
+2018/12/28 10:40:28.595| aclmatchAclList: 0x7ffd01e7a530 returning true (AND list satisfied)
+2018/12/28 10:40:28.595| ACLChecklist::markFinished: 0x7ffd01e7a530 checklist processing finished
+2018/12/28 10:40:28.595| FwdState::start() 'api.twitter.com:443'
+2018/12/28 10:40:28.595| StoreEntry::lock: key '79802DDB9FAAFB859FC17691A044FA29' count=2
+2018/12/28 10:40:28.595| peerSelect: api.twitter.com:443
+2018/12/28 10:40:28.595| StoreEntry::lock: key '79802DDB9FAAFB859FC17691A044FA29' count=3
+2018/12/28 10:40:28.595| peerSelectFoo: 'POST api.twitter.com'
+2018/12/28 10:40:28.595| ACLChecklist::preCheck: 0x2043c18 checking 'always_direct allow all'
+2018/12/28 10:40:28.595| ACLList::matches: checking all
+2018/12/28 10:40:28.595| ACL::checklistMatches: checking 'all'
+2018/12/28 10:40:28.595| aclIpMatchIp: '49.248.110.30:25078' found
+2018/12/28 10:40:28.595| ACL::ChecklistMatches: result for 'all' is 1
+2018/12/28 10:40:28.595| aclmatchAclList: 0x2043c18 returning true (AND list satisfied)
+2018/12/28 10:40:28.595| ACLChecklist::markFinished: 0x2043c18 checklist processing finished
+2018/12/28 10:40:28.595| ACLChecklist::check: 0x2043c18 match found, calling back with 1
+2018/12/28 10:40:28.595| ACLChecklist::checkCallback: 0x2043c18 answer=1
+2018/12/28 10:40:28.595| peerCheckAlwaysDirectDone: 1
+2018/12/28 10:40:28.595| peerSelectFoo: 'POST api.twitter.com'
+2018/12/28 10:40:28.595| peerSelectFoo: direct = DIRECT_YES
+2018/12/28 10:40:28.595| peerSelectCallback: api.twitter.com:443
+2018/12/28 10:40:28.595| fwdStartComplete: api.twitter.com:443
+2018/12/28 10:40:28.595| fwdConnectStart: api.twitter.com:443
+2018/12/28 10:40:28.595| PconnPool::pop: found api.twitter.com:443(to kill)
+2018/12/28 10:40:28.595| commio_cancel_callback: called for FD 30
+2018/12/28 10:40:28.595| comm.cc(1211) commSetTimeout: FD 30 timeout -1
+2018/12/28 10:40:28.595| comm.cc(1222) commSetTimeout: FD 30 timeout -1
+2018/12/28 10:40:28.595| IdleConnList::removeFD: found FD 30 at index 1
+2018/12/28 10:40:28.595| comm_close: start closing FD 30
+2018/12/28 10:40:28.596| comm.cc(1211) commSetTimeout: FD 30 timeout -1
+2018/12/28 10:40:28.596| comm.cc(1222) commSetTimeout: FD 30 timeout -1
+2018/12/28 10:40:28.596| fwdConnectStart: got outgoing addr 0.0.0.0, tos 0
+2018/12/28 10:40:28.596| comm_openex: Attempt open socket for: 0.0.0.0
+2018/12/28 10:40:28.596| comm_openex: Opened socket FD 27 : family=2, type=1, protocol=6
+2018/12/28 10:40:28.596| fd_open() FD 27 api.twitter.com:443
+2018/12/28 10:40:28.596| fwdConnectStart: got TCP FD 27
+2018/12/28 10:40:28.596| comm.cc(1211) commSetTimeout: FD 27 timeout 60
+2018/12/28 10:40:28.596| comm.cc(1222) commSetTimeout: FD 27 timeout 60
+2018/12/28 10:40:28.596| The AsyncCall SomeCommConnectHandler constructed, this=0x20ce020 [call616]
+2018/12/28 10:40:28.596| commConnectStart: FD 27, cb 0x20ce020*1, api.twitter.com:443
+2018/12/28 10:40:28.596| StoreEntry::unlock: key '79802DDB9FAAFB859FC17691A044FA29' count=2
+2018/12/28 10:40:28.596| clientParseRequest: Not reading, as this request may need the connection
+2018/12/28 10:40:28.596| fd_close FD 30 api.twitter.com idle connection
+2018/12/28 10:40:28.596| comm_read_try: FD 21, size 4095, retval 449, errno 0
+2018/12/28 10:40:28.596| commio_finish_callback: called for FD 21 (0, 0)
+2018/12/28 10:40:28.596| buf to splunk: "","2018-12-28 10:40:28","access","dns/proxy","admin@securlyqa1.com","49.248.110.30","dnstest@securlyqa1.com","","twitter.com","/","Test tweet ","Networking","Base/Default Policy","1545993628","securlyqa1comTestGdocs","","","","","","","",""
+2018/12/28 10:40:28.642| commConnectCallback: FD 27
+2018/12/28 10:40:28.642| comm.cc(1211) commSetTimeout: FD 27 timeout -1
+2018/12/28 10:40:28.642| comm.cc(1222) commSetTimeout: FD 27 timeout -1
+2018/12/28 10:40:28.642| comm.cc(943) will call SomeCommConnectHandler(FD 27, data=0x2054318, ) [call616]
+2018/12/28 10:40:28.642| commConnectFree: FD 27
+2018/12/28 10:40:28.642| entering SomeCommConnectHandler(FD 27, data=0x2054318, )
+2018/12/28 10:40:28.643| AsyncCall.cc(32) make: make call SomeCommConnectHandler [call616]
+2018/12/28 10:40:28.643| fwdConnectDone: FD 27: 'api.twitter.com:443'
+2018/12/28 10:40:28.643| leaving SomeCommConnectHandler(FD 27, data=0x2054318, )
+2018/12/28 10:40:28.694| fwdDispatch: FD 21: Fetching 'POST api.twitter.com:443'
+2018/12/28 10:40:28.694| httpStart: "POST api.twitter.com:443"
+2018/12/28 10:40:28.695| StoreEntry::lock: key '79802DDB9FAAFB859FC17691A044FA29' count=3
+2018/12/28 10:40:28.695| comm.cc(1222) commSetTimeout: FD 27 timeout 86400
+2018/12/28 10:40:28.695| Server.cc(250) startRequestBodyFlow: expecting request body from  [0<=449<=449 449+1598 pipe0x1fef928 cons0x20cd108]
+2018/12/28 10:40:28.695| getMaxAge: 'api.twitter.com:443'
+2018/12/28 10:40:28.695| Server.cc(322) handleMoreRequestBodyAvailable: waiting for request body write to complete
+2018/12/28 10:40:28.696| Server.cc(332) handleRequestBodyProductionEnded: waiting for request body write to complete
+2018/12/28 10:40:28.696| commio_finish_callback: called for FD 27 (0, 0)
+2018/12/28 10:40:28.696| Server.cc(364) sentRequestBody: sentRequestBody called
+2018/12/28 10:40:28.696| Server.cc(424) sendMoreRequestBody: will write 449 request body bytes
+2018/12/28 10:40:28.696| The AsyncCall ServerStateData::sentRequestBody constructed, this=0x20c63f0 [call625]
+2018/12/28 10:40:28.696| commio_finish_callback: called for FD 27 (0, 0)
+2018/12/28 10:40:28.697| comm.cc(166) will call ServerStateData::sentRequestBody(FD 27, data=0x20cd108) [call625]
+2018/12/28 10:40:28.697| entering ServerStateData::sentRequestBody(FD 27, data=0x20cd108)
+2018/12/28 10:40:28.697| AsyncCall.cc(32) make: make call ServerStateData::sentRequestBody [call625]
+2018/12/28 10:40:28.697| HttpStateData status in: [ job30]
+2018/12/28 10:40:28.697| Server.cc(364) sentRequestBody: sentRequestBody called
+2018/12/28 10:40:28.697| comm.cc(1222) commSetTimeout: FD 27 timeout 900
+2018/12/28 10:40:28.698| HttpStateData status out: [ job30]
+2018/12/28 10:40:28.698| leaving ServerStateData::sentRequestBody(FD 27, data=0x20cd108)
+2018/12/28 10:40:28.792| comm_read_try: FD 27, size 16383, retval 944, errno 0
+2018/12/28 10:40:28.792| commio_finish_callback: called for FD 27 (0, 0)
+2018/12/28 10:40:28.792| ctx: enter level  0: 'api.twitter.com:443'
+2018/12/28 10:40:28.792| processReplyHeader: key '79802DDB9FAAFB859FC17691A044FA29'
+2018/12/28 10:40:28.792| hdr cc: unknown cache-directive: near 'pre-check=0, post-check=0' in '0x7ffd01e7ad10'
+2018/12/28 10:40:28.792| hdr cc: unknown cache-directive: near 'post-check=0' in '0x7ffd01e7ad10'
+2018/12/28 10:40:28.793| ctx: exit level  0
+2018/12/28 10:40:28.793| StoreEntry::replaceHttpReply: api.twitter.com:443
+2018/12/28 10:40:28.793| InvokeHandlers: 79802DDB9FAAFB859FC17691A044FA29
+2018/12/28 10:40:28.793| StoreEntry::InvokeHandlers: checking client #0
+2018/12/28 10:40:28.793| storeGet: looking up 068938C203027736F8A8C027950E2CC3
+2018/12/28 10:40:28.793| storeGet: looking up 55722981F5704B3E01265773C71D8F11
+2018/12/28 10:40:28.793| storeGet: looking up B0BE6C1F9FA7140925570A654CC234C3
+2018/12/28 10:40:28.794| storeGet: looking up AC78BFA3741E2A2251B048FEE0E30D2A
+2018/12/28 10:40:28.794| storeGet: looking up 90D9A31CCFE156DAB03017D75F821E14
+2018/12/28 10:40:28.794| storeGet: looking up 2BF6B67CE377FDCA344EFCE8E5206F67
+2018/12/28 10:40:28.794| storeGet: looking up 8CB9C6755C97D10692FF44BCFD34271F
+2018/12/28 10:40:28.794| storeGet: looking up 4E86F27B2FBA9DAFD3DC6007756D43DA
+2018/12/28 10:40:28.794| storeGet: looking up 8C7219F58698E5FE203BABE1BC93C11F
+2018/12/28 10:40:28.794| storeGet: looking up B2E1EFC5EE9103E705262FF56A2F4B7A
+2018/12/28 10:40:28.795| storeGet: looking up 0BD0B330F524E790337709C655816D2E
+2018/12/28 10:40:28.795| storeGet: looking up 6A7FDF9D17F05785F2D0F422147F48E0
+2018/12/28 10:40:28.795| storeGet: looking up 131AAADF8A66908C3A61B93A16BCAC8E
+2018/12/28 10:40:28.795| storeGet: looking up 63D1F61C8108D0E5F206C3878D2F79FD
+2018/12/28 10:40:28.795| storeGet: looking up 5BF5D17FA8CA091E29C92F00BB81CA26
+2018/12/28 10:40:28.795| storeGet: looking up A7EF4899673F4876BF32022009DD8736
+2018/12/28 10:40:28.795| storeGet: looking up 8939A915FC056CA936797E10F0A92417
+2018/12/28 10:40:28.795| storeGet: looking up A11B2BB5B6D17488FA4F5E55BDC5EAC4
+2018/12/28 10:40:28.796| storeGet: looking up 05BDBF0DD6BC9893519AAC85219C261B
+2018/12/28 10:40:28.796| storeGet: looking up EC381A2F78AFD8D8F3BFEB57998A7E1C
+2018/12/28 10:40:28.796| storeGet: looking up 68FC60DF2819FF59CCE88831B080A8AB
+2018/12/28 10:40:28.796| storeGet: looking up 64325B9651108BDEFBC82027F8C06780
+2018/12/28 10:40:28.796| storeGet: looking up 50D4EA0B2C30E82EF68BEC0278EB37A1
+2018/12/28 10:40:28.796| storeGet: looking up 449F774E734CED4D39F27ABED5F00D63
+2018/12/28 10:40:28.796| storeGet: looking up 53FF5E8E7225F083597895FF5C15783F
+2018/12/28 10:40:28.796| storeGet: looking up 8AE7DD18ADE3D83E5CB6406D648ADE1B
+2018/12/28 10:40:28.805| ctx: enter level  0: 'api.twitter.com:443'
+2018/12/28 10:40:28.805| haveParsedReplyHeaders: HTTP CODE: 200
+2018/12/28 10:40:28.805| ------------------------ BEGIN RESPONSE PROCESSING PHASE --------------
+2018/12/28 10:40:28.805| securlyhook_processReply Enter
+2018/12/28 10:40:28.805| redis connect HTTP
+2018/12/28 10:40:28.805| securlyhook_processReply Leave
+2018/12/28 10:40:28.805| storeGet: looking up 209FC695BED899D33F2A1BD714393E64
+2018/12/28 10:40:28.805| storeGet: looking up B0BE6C1F9FA7140925570A654CC234C3
+2018/12/28 10:40:28.805| StoreEntry::expireNow: '79802DDB9FAAFB859FC17691A044FA29'
+2018/12/28 10:40:28.805| ctx: exit level  0
+2018/12/28 10:40:28.806| InvokeHandlers: 79802DDB9FAAFB859FC17691A044FA29
+2018/12/28 10:40:28.806| StoreEntry::InvokeHandlers: checking client #0
+2018/12/28 10:40:28.806| storeClientCopy2: 79802DDB9FAAFB859FC17691A044FA29
+2018/12/28 10:40:28.806| store_client::doCopy: Copying normal from memory
+2018/12/28 10:40:28.806| hdr cc: unknown cache-directive: near 'pre-check=0, post-check=0' in '0x7ffd01e7abc0'
+2018/12/28 10:40:28.806| hdr cc: unknown cache-directive: near 'post-check=0' in '0x7ffd01e7abc0'
+2018/12/28 10:40:28.806| The reply for POST api.twitter.com:443 is ALLOWED, because it matched 'all'
+2018/12/28 10:40:28.806| StoreEntry::lock: key '79802DDB9FAAFB859FC17691A044FA29' count=4
+2018/12/28 10:40:28.806| clientReplyContext::sendMoreData: Appending 0 bytes after 944 bytes of headers
+2018/12/28 10:40:28.806| clientStreamCallback: Calling 1 with cbdata 0x2042cd0 from node 0x2024358
+2018/12/28 10:40:28.806| persistentConnStatus: FD 27 eof=0
+2018/12/28 10:40:28.806| comm.cc(1222) commSetTimeout: FD 27 timeout 900
+2018/12/28 10:40:28.806| comm_read_try: FD 27, size 16383, retval 903, errno 0
+2018/12/28 10:40:28.807| commio_finish_callback: called for FD 27 (0, 0)
+2018/12/28 10:40:28.807| commio_finish_callback: called for FD 21 (0, 0)
+2018/12/28 10:40:28.807| InvokeHandlers: 79802DDB9FAAFB859FC17691A044FA29
+2018/12/28 10:40:28.807| StoreEntry::InvokeHandlers: checking client #0
+2018/12/28 10:40:28.807| persistentConnStatus: FD 27 eof=0
+2018/12/28 10:40:28.807| comm.cc(1222) commSetTimeout: FD 27 timeout -1
+2018/12/28 10:40:28.807| forward.cc(303) unregister: api.twitter.com:443
+2018/12/28 10:40:28.807| PconnPool::push: found IdleConnList for {api.twitter.com:443}
+2018/12/28 10:40:28.807| comm.cc(1211) commSetTimeout: FD 27 timeout 60
+2018/12/28 10:40:28.807| comm.cc(1222) commSetTimeout: FD 27 timeout 60
+2018/12/28 10:40:28.807| PconnPool::push: pushed FD 27 for api.twitter.com:443
+2018/12/28 10:40:28.807| forward.cc(321) complete: api.twitter.com:443
+	status 200
+2018/12/28 10:40:28.807| fwdReforward: api.twitter.com:443?
+2018/12/28 10:40:28.808| fwdReforward: No, ENTRY_FWD_HDR_WAIT isn't set
+2018/12/28 10:40:28.808| fwdComplete: server FD -1 not re-forwarding status 200
+2018/12/28 10:40:28.808| storeComplete: '79802DDB9FAAFB859FC17691A044FA29'
+2018/12/28 10:40:28.808| storeEntryValidLength: Checking '79802DDB9FAAFB859FC17691A044FA29'
+2018/12/28 10:40:28.808| InvokeHandlers: 79802DDB9FAAFB859FC17691A044FA29
+2018/12/28 10:40:28.808| StoreEntry::InvokeHandlers: checking client #0
+2018/12/28 10:40:28.808| storePendingNClients: returning 1
+2018/12/28 10:40:28.808| Server.cc(228) quitIfAllDone: transaction done
+2018/12/28 10:40:28.808| StoreEntry::unlock: key '79802DDB9FAAFB859FC17691A044FA29' count=3
+2018/12/28 10:40:28.808| forward.cc(164) ~FwdState: FwdState destructor starting
+2018/12/28 10:40:28.808| StoreEntry::unlock: key '79802DDB9FAAFB859FC17691A044FA29' count=2
+2018/12/28 10:40:28.808| forward.cc(193) ~FwdState: FwdState destructor done
+2018/12/28 10:40:28.808| HttpReply.cc(569) receivedBodyTooLarge: -4096 >? -1
+2018/12/28 10:40:28.808| clientStreamRead: Calling 1 with cbdata 0x207a5f8 from node 0x2023ab8
+2018/12/28 10:40:28.809| store_client::copy: 79802DDB9FAAFB859FC17691A044FA29, from 944, for length 4096, cb 1, cbdata 0x2079548
+2018/12/28 10:40:28.809| storeClientCopy2: 79802DDB9FAAFB859FC17691A044FA29
+2018/12/28 10:40:28.809| store_client::doCopy: Copying normal from memory
+2018/12/28 10:40:28.809| clientStreamCallback: Calling 1 with cbdata 0x2042cd0 from node 0x2024358
+2018/12/28 10:40:28.809| commio_finish_callback: called for FD 21 (0, 0)
+2018/12/28 10:40:28.809| client_side_reply.cc(1042) storeOKTransferDone: storeOKTransferDone  out.offset=903 objectLen()=1847 headers_sz=944
+2018/12/28 10:40:28.809| ClientSocketContext::keepaliveNextRequest: FD 21
+2018/12/28 10:40:28.809| clientStreamDetach: Detaching node 0x2023ab8
+2018/12/28 10:40:28.809| Freeing clientStreamNode 0x2023ab8
+2018/12/28 10:40:28.809| httpRequestFree: api.twitter.com:443
+2018/12/28 10:40:28.809| StoreEntry::unlock: key '79802DDB9FAAFB859FC17691A044FA29' count=1
+2018/12/28 10:40:28.809| clientStreamAbort: Aborting stream with tail 0x2024358
+2018/12/28 10:40:28.809| clientStreamDetach: Detaching node 0x2024358
+2018/12/28 10:40:28.810| clientStreamDetach: Calling 1 with cbdata 0x207a5f8
+2018/12/28 10:40:28.810| Freeing clientStreamNode 0x2024358
+2018/12/28 10:40:28.810| storeUnregister: called for '79802DDB9FAAFB859FC17691A044FA29'
+2018/12/28 10:40:28.810| storePendingNClients: returning 0
+2018/12/28 10:40:28.810| StoreEntry::unlock: key '79802DDB9FAAFB859FC17691A044FA29' count=0
+2018/12/28 10:40:28.810| storePendingNClients: returning 0
+2018/12/28 10:40:28.810| storeRelease: Releasing: '79802DDB9FAAFB859FC17691A044FA29'
+2018/12/28 10:40:28.810| store.cc(401) destroyStoreEntry: destroyStoreEntry: destroying 0x2054e98
+2018/12/28 10:40:28.810| store.cc(391) destroyMemObject: destroyMemObject 0x1feab40
+2018/12/28 10:40:28.810| MemObject.cc(97) ~MemObject: del MemObject 0x1feab40
+2018/12/28 10:40:28.810| ClientSocketContext:: FD 21: calling conn->readNextRequest()
+2018/12/28 10:40:28.810| comm.cc(1222) commSetTimeout: FD 21 timeout 120
+2018/12/28 10:40:29.235| comm_read_try: FD 13, size 16383, retval 3, errno 0
+2018/12/28 10:40:29.235| commio_finish_callback: called for FD 13 (0, 0)
+2018/12/28 10:40:29.235| InvokeHandlers: E9FE4D03237F88343D755A1DA2E12C7A
+2018/12/28 10:40:29.235| StoreEntry::InvokeHandlers: checking client #0
+2018/12/28 10:40:29.235| storeClientCopy2: E9FE4D03237F88343D755A1DA2E12C7A
+2018/12/28 10:40:29.235| store_client::doCopy: Waiting for more
+2018/12/28 10:40:29.235| persistentConnStatus: FD 13 eof=0
+2018/12/28 10:40:29.235| comm.cc(1222) commSetTimeout: FD 13 timeout 900
+2018/12/28 10:40:29.235| comm_read_try: FD 13, size 16383, retval 9, errno 0
+2018/12/28 10:40:29.235| commio_finish_callback: called for FD 13 (0, 0)
+2018/12/28 10:40:29.235| InvokeHandlers: E9FE4D03237F88343D755A1DA2E12C7A
+2018/12/28 10:40:29.235| StoreEntry::InvokeHandlers: checking client #0
+2018/12/28 10:40:29.235| storeClientCopy2: E9FE4D03237F88343D755A1DA2E12C7A
+2018/12/28 10:40:29.235| store_client::doCopy: Copying normal from memory
+2018/12/28 10:40:29.235| clientStreamCallback: Calling 1 with cbdata 0x1fa7f60 from node 0x1fa9be8
+2018/12/28 10:40:29.235| persistentConnStatus: FD 13 eof=0
+2018/12/28 10:40:29.235| comm.cc(1222) commSetTimeout: FD 13 timeout 900
+2018/12/28 10:40:29.235| comm_read_try: FD 13, size 16383, retval 2, errno 0
+2018/12/28 10:40:29.235| commio_finish_callback: called for FD 13 (0, 0)
+2018/12/28 10:40:29.235| commio_finish_callback: called for FD 9 (0, 0)
+2018/12/28 10:40:29.236| InvokeHandlers: E9FE4D03237F88343D755A1DA2E12C7A
+2018/12/28 10:40:29.236| StoreEntry::InvokeHandlers: checking client #0
+2018/12/28 10:40:29.236| persistentConnStatus: FD 13 eof=0
+2018/12/28 10:40:29.236| comm.cc(1222) commSetTimeout: FD 13 timeout 900
+2018/12/28 10:40:29.236| HttpReply.cc(569) receivedBodyTooLarge: -3779 >? -1
+2018/12/28 10:40:29.236| clientStreamRead: Calling 1 with cbdata 0x1f95ba8 from node 0x1fce7a8
+2018/12/28 10:40:29.236| store_client::copy: E9FE4D03237F88343D755A1DA2E12C7A, from 1051, for length 4096, cb 1, cbdata 0x1f94af8
+2018/12/28 10:40:29.236| storeClientCopy2: E9FE4D03237F88343D755A1DA2E12C7A
+2018/12/28 10:40:29.236| store_client::doCopy: Waiting for more
+2018/12/28 10:40:29.437| comm_read_try: FD 21, size 4095, retval -1, errno 11
+2018/12/28 10:40:29.437| comm_read_try: FD 21, size 4095, retval -1, errno 11
+2018/12/28 10:40:29.437| comm_read_try: FD 21, size 4095, retval 2512, errno 0
+2018/12/28 10:40:29.437| commio_finish_callback: called for FD 21 (0, 0)
+2018/12/28 10:40:29.437| parseHttpRequest: req_hdr = {Host: api.twitter.com
+Cookie: scrly_token=NWIwMDEwMzY6OmFkbWluQHNlY3VybHlxYTEuY29tOg==; _gat=1; _ga=GA1.2.865424804.1545992484; _gid=GA1.2.2019245991.1545992484; _twitter_sess=BAh7CiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7ADoPY3JlYXRlZF9hdGwrCHDIVfRnAToJdXNlcmwr%250ACQCwVCv35skJOgxjc3JmX2lkIiVlYzQ5NGZkZGI3NjU2MTNmZGFlNjU1YTYz%250ANzM1NWFlMjoHaWQiJTZlMWQ4NjU4NDc1ZTRlMWVlM2RlZTE2YzcwNDQzMmNl--f8ab1d4793ae68de2587dc59fe92a5cef564bd1a; ads_prefs="HBESAAA="; auth_token=71f19f609400e6dc1eb3123a385ae2f5ad238753; ct0=cd21a6b4374421c68b781458f06df3f7; dnt=1; kdt=FJr916lzrhs9fZzHQ5Po5S9ZlKmv8MmCcizJOxjg; remember_checked_on=1; twid="u=705348765918474240"; u=56a7beac460e00b1a0d03c254cc5e33e; external_referer=padhuUp37zjaIykqEpRnNX56lLJwBgqHx62t%2BCGMAHWb0D9b9qVsFyeWBFRSKCaGZaSC0huGMdk80EHbMuXIFzfh%2F9RAMItdgmQfAFaS0%2FeDfvkgCyu9yU5dxf%2Fcxv1ODrPROUutJKkkGuYuTlwF3YbCQLT%2FWuLDPWJbAG1Uhe6j5xOzwdAWbulrr%2FLpcCl7a%2BarwBpuASHixs7IeITS56%2FxnwrPWjHdy%2BN18s0ZL9RSOVH66laOK8Qwk5HvKT1FqUc1f0QAXQvAOwGeCvMIKvEEwtz7lcvoJ1ZqoAxXeuVBKjS5voFv%2BsAhvhHmAemnnpHaTI3%2BeUMIXFnioxAoUkH4w2vASc5vvlOJ1IhT4tt%2BmtHY9we5IRXR1s5AwTPuCWQJ06zjgw%2BPbyMGwQ5r%2BJhz9lBRywl7Tv56Ju8OFsc%2BVuUJ8xwzzFKtrQ%2BoKZZWWSP1f3UHVl7NervZidCAhPZ%2FRJ%2B%2FZJQ9D%2FfF5BDw0Pop129RiqetzOcPUSFihO9ZhntCQ7eBn6%2BEUjVSYfz%2FD0bA3jHkPhz6%2Fd3TpUsMJI6RUeEsrDpXUJ4qrhRzb%2BAeYntdxuLN%2BSPNnao4FRJnZSs5E0mIa2O8vAVjxUey8TrKUrnzWbNl%2F4tWL8aenWoZ1fFuFymokcV3NNZHPyV8e6NwkQBM4KBo3ruX6rTeNHTsnTpwbabnhdncl3GSQEB2tD9eXmrDklTq85%2FlhaGNnwPHOYyVxskVJeXRvQRwRhBy4sOhn7QDu%2BWjHRdWhsdjfmVsbQbza2cDODI%2FAXPhBHhpDQtynqiGaKM9KbMc%2BuXVNXb0ijbuO87VbfrI6h4dsVlMfKIAV3ryNRkyscHHYnuS0p4KE53u6ugPsK%2F7Jjw%3D|0|8e8t2xd8A2w%3D; guest_id=v1%3A154599247717611424; personalization_id="v1_y2Dr9dW9b3AKojvutU+okQ=="
+Accept: */*
+Authorization: Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA
+x-twitter-client-language: en-GB
+Accept-Language: en-us
+Accept-Encoding: br, gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Origin: https://mobile.twitter.com
+User-Agent: Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1
+Referer: https://mobile.twitter.com/home?scrlybrkr=5b001036
+Content-Length: 417
+Connection: keep-alive
+x-csrf-token: cd21a6b4374421c68b781458f06df3f7
+x-twitter-auth-type: OAuth2Session
+x-twitter-active-user: yes
+
+}
+2018/12/28 10:40:29.437| parseHttpRequest: end = {
+}
+2018/12/28 10:40:29.437| parseHttpRequest: prefix_sz = 2512, req_line_sz = 42
+2018/12/28 10:40:29.438| clientStreamInsertHead: Inserted node 0x2023ab8 with data 0x2042cd0 after head
+2018/12/28 10:40:29.438| comm.cc(1211) commSetTimeout: FD 21 timeout 86400
+2018/12/28 10:40:29.438| comm.cc(1222) commSetTimeout: FD 21 timeout 86400
+
