@@ -2,7 +2,7 @@
 //https://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/
 //https://leetcode.com/problems/longest-increasing-subsequence/
 #include <bits/stdc++.h>
-using namespace std;
+using	 namespace std;
 // Binary search (note boundaries in the caller) 
 int CeilIndex(std::vector<int>& v, int l, int r, int key) 
 { 
