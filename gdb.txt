@@ -1,0 +1,189 @@
+Breakpoint 1 at 0xd33: file spiralMat.cpp, line 5.
+Starting program: /home/saurav/Desktop/self/Programming-master/a.out 
+
+Breakpoint 1, spiral (startrow=0, startcol=0, endrow=4, endcol=7, mat=std::vector of length 5, capacity 5 = {...}) at spiralMat.cpp:5
+5	    if(startrow>endrow ||(startcol>endcol))
+7	    if(startrow==endrow && startrow==endcol && endrow==endrow){
+11	    for(int i=startcol;i<endcol;i++){
+12	        cout<<mat[startrow][i]<<" ";
+11	    for(int i=startcol;i<endcol;i++){
+12	        cout<<mat[startrow][i]<<" ";
+11	    for(int i=startcol;i<endcol;i++){
+12	        cout<<mat[startrow][i]<<" ";
+11	    for(int i=startcol;i<endcol;i++){
+12	        cout<<mat[startrow][i]<<" ";
+11	    for(int i=startcol;i<endcol;i++){
+12	        cout<<mat[startrow][i]<<" ";
+11	    for(int i=startcol;i<endcol;i++){
+12	        cout<<mat[startrow][i]<<" ";
+11	    for(int i=startcol;i<endcol;i++){
+12	        cout<<mat[startrow][i]<<" ";
+11	    for(int i=startcol;i<endcol;i++){
+15	    for(int i=startrow;i<endrow;i++){
+16	        cout<<mat[i][endcol]<<" ";
+15	    for(int i=startrow;i<endrow;i++){
+16	        cout<<mat[i][endcol]<<" ";
+Already logging to gdb.txt.
+Currently logging to "gdb.txt".
+Logs will be appended to the log file.
+Output will be logged and displayed.
+15	    for(int i=startrow;i<endrow;i++){
+16	        cout<<mat[i][endcol]<<" ";
+15	    for(int i=startrow;i<endrow;i++){
+16	        cout<<mat[i][endcol]<<" ";
+15	    for(int i=startrow;i<endrow;i++){
+19	    for(int i=endcol;i>startcol;i--){
+20	        cout<<mat[endrow][i]<<" ";
+19	    for(int i=endcol;i>startcol;i--){
+20	        cout<<mat[endrow][i]<<" ";
+19	    for(int i=endcol;i>startcol;i--){
+20	        cout<<mat[endrow][i]<<" ";
+19	    for(int i=endcol;i>startcol;i--){
+20	        cout<<mat[endrow][i]<<" ";
+19	    for(int i=endcol;i>startcol;i--){
+20	        cout<<mat[endrow][i]<<" ";
+19	    for(int i=endcol;i>startcol;i--){
+20	        cout<<mat[endrow][i]<<" ";
+19	    for(int i=endcol;i>startcol;i--){
+20	        cout<<mat[endrow][i]<<" ";
+19	    for(int i=endcol;i>startcol;i--){
+23	    for(int i=endrow;i>startrow;i--){
+24	        cout<<mat[i][startcol]<<" ";
+23	    for(int i=endrow;i>startrow;i--){
+24	        cout<<mat[i][startcol]<<" ";
+23	    for(int i=endrow;i>startrow;i--){
+24	        cout<<mat[i][startcol]<<" ";
+23	    for(int i=endrow;i>startrow;i--){
+24	        cout<<mat[i][startcol]<<" ";
+23	    for(int i=endrow;i>startrow;i--){
+26	    spiral(startrow+1,startcol+1,endrow-1,endcol-1,mat);
+
+Breakpoint 1, spiral (startrow=1, startcol=1, endrow=3, endcol=6, mat=std::vector of length 5, capacity 5 = {...}) at spiralMat.cpp:5
+5	    if(startrow>endrow ||(startcol>endcol))
+7	    if(startrow==endrow && startrow==endcol && endrow==endrow){
+11	    for(int i=startcol;i<endcol;i++){
+Currently logging to "gdb.txt".
+Logs will be appended to the log file.
+Output will be logged and displayed.
+Breakpoint 1 at 0xd33: file spiralMat.cpp, line 5.
+Starting program: /home/saurav/Desktop/self/Programming-master/a.out 
+
+Breakpoint 1, spiral (startrow=0, startcol=0, endrow=4, endcol=7, mat=std::vector of length 5, capacity 5 = {...}) at spiralMat.cpp:5
+5	    if(startrow>endrow ||(startcol>endcol))
+7	    if(startrow==endrow && startrow==endcol && endrow==endrow){
+11	    for(int i=startcol;i<endcol;i++){
+12	        std::cout<<mat[startrow][i]<<" ";
+11	    for(int i=startcol;i<endcol;i++){
+12	        std::cout<<mat[startrow][i]<<" ";
+No symbol "operator<<" in current context.
+$1 = 67
+$2 = std::vector of length 8, capacity 8 = {5, 98, 18, 79, 12, 81, 28, 82}
+The program is not being run.
+Starting program: /home/saurav/Desktop/self/Programming-master/a.out 
+
+Breakpoint 1, spiral (startrow=0, startcol=0, endrow=4, endcol=7, mat=std::vector of length 5, capacity 5 = {...}) at spiralMat.cpp:5
+5	    if(startrow>endrow ||(startcol>endcol))
+Continuing.
+
+Breakpoint 1, spiral (startrow=1, startcol=1, endrow=3, endcol=6, mat=std::vector of length 5, capacity 5 = {...}) at spiralMat.cpp:5
+5	    if(startrow>endrow ||(startcol>endcol))
+$1 = std::vector of length 22, capacity 32 = {7, 67, 5, 49, 44, 24, 29, 89, 82, 50, 7, 41, 63, 38, 36, 22, 56, 59, 77, 36, 38, 5}
+7	    if(startrow==endrow && startrow==endcol && endrow==endrow){
+12	    for(int i=startcol;i<endcol;i++){
+13	        std::cout<<mat[startrow][i]<<" ";
+14	        ans.push_back(mat[startrow][i]);
+12	    for(int i=startcol;i<endcol;i++){
+13	        std::cout<<mat[startrow][i]<<" ";
+14	        ans.push_back(mat[startrow][i]);
+12	    for(int i=startcol;i<endcol;i++){
+13	        std::cout<<mat[startrow][i]<<" ";
+14	        ans.push_back(mat[startrow][i]);
+12	    for(int i=startcol;i<endcol;i++){
+13	        std::cout<<mat[startrow][i]<<" ";
+14	        ans.push_back(mat[startrow][i]);
+12	    for(int i=startcol;i<endcol;i++){
+$2 = std::vector of length 26, capacity 32 = {7, 67, 5, 49, 44, 24, 29, 89, 82, 50, 7, 41, 63, 38, 36, 22, 56, 59, 77, 36, 38, 5, 98, 18, 79, 12}
+13	        std::cout<<mat[startrow][i]<<" ";
+14	        ans.push_back(mat[startrow][i]);
+12	    for(int i=startcol;i<endcol;i++){
+17	    for(int i=startrow;i<endrow;i++){
+18	        std::cout<<mat[i][endcol]<<" ";
+19	        ans.push_back(mat[i][endcol]);
+17	    for(int i=startrow;i<endrow;i++){
+18	        std::cout<<mat[i][endcol]<<" ";
+19	        ans.push_back(mat[i][endcol]);
+17	    for(int i=startrow;i<endrow;i++){
+22	    for(int i=endcol;i>startcol;i--){
+23	        std::cout<<mat[endrow][i]<<" ";
+24	        ans.push_back(mat[endrow][i]);
+22	    for(int i=endcol;i>startcol;i--){
+23	        std::cout<<mat[endrow][i]<<" ";
+24	        ans.push_back(mat[endrow][i]);
+22	    for(int i=endcol;i>startcol;i--){
+23	        std::cout<<mat[endrow][i]<<" ";
+$3 = std::vector of length 31, capacity 32 = {7, 67, 5, 49, 44, 24, 29, 89, 82, 50, 7, 41, 63, 38, 36, 22, 56, 59, 77, 36, 38, 5, 98, 18, 79, 12, 
+  81, 28, 23, 2, 10}
+24	        ans.push_back(mat[endrow][i]);
+22	    for(int i=endcol;i>startcol;i--){
+23	        std::cout<<mat[endrow][i]<<" ";
+24	        ans.push_back(mat[endrow][i]);
+22	    for(int i=endcol;i>startcol;i--){
+23	        std::cout<<mat[endrow][i]<<" ";
+24	        ans.push_back(mat[endrow][i]);
+22	    for(int i=endcol;i>startcol;i--){
+27	    for(int i=endrow;i>startrow;i--){
+28	        std::cout<<mat[i][startcol]<<" ";
+29	        ans.push_back(mat[i][startcol]);
+27	    for(int i=endrow;i>startrow;i--){
+28	        std::cout<<mat[i][startcol]<<" ";
+29	        ans.push_back(mat[i][startcol]);
+27	    for(int i=endrow;i>startrow;i--){
+$4 = std::vector of length 36, capacity 64 = {7, 67, 5, 49, 44, 24, 29, 89, 82, 50, 7, 41, 63, 38, 36, 22, 56, 59, 77, 36, 38, 5, 98, 18, 79, 12, 
+  81, 28, 23, 2, 10, 0, 63, 1, 6, 49}
+31	    spiral(startrow+1,startcol+1,endrow-1,endcol-1,mat);
+
+Breakpoint 1, spiral (startrow=2, startcol=2, endrow=2, endcol=5, mat=std::vector of length 5, capacity 5 = {...}) at spiralMat.cpp:5
+5	    if(startrow>endrow ||(startcol>endcol))
+7	    if(startrow==endrow && startrow==endcol && endrow==endrow){
+$5 = std::vector of length 36, capacity 64 = {7, 67, 5, 49, 44, 24, 29, 89, 82, 50, 7, 41, 63, 38, 36, 22, 56, 59, 77, 36, 38, 5, 98, 18, 79, 12, 
+  81, 28, 23, 2, 10, 0, 63, 1, 6, 49}
+12	    for(int i=startcol;i<endcol;i++){
+13	        std::cout<<mat[startrow][i]<<" ";
+14	        ans.push_back(mat[startrow][i]);
+12	    for(int i=startcol;i<endcol;i++){
+13	        std::cout<<mat[startrow][i]<<" ";
+14	        ans.push_back(mat[startrow][i]);
+12	    for(int i=startcol;i<endcol;i++){
+13	        std::cout<<mat[startrow][i]<<" ";
+14	        ans.push_back(mat[startrow][i]);
+12	    for(int i=startcol;i<endcol;i++){
+17	    for(int i=startrow;i<endrow;i++){
+$6 = std::vector of length 39, capacity 64 = {7, 67, 5, 49, 44, 24, 29, 89, 82, 50, 7, 41, 63, 38, 36, 22, 56, 59, 77, 36, 38, 5, 98, 18, 79, 12, 
+  81, 28, 23, 2, 10, 0, 63, 1, 6, 49, 46, 99, 86}
+22	    for(int i=endcol;i>startcol;i--){
+23	        std::cout<<mat[endrow][i]<<" ";
+24	        ans.push_back(mat[endrow][i]);
+22	    for(int i=endcol;i>startcol;i--){
+$7 = 5
+23	        std::cout<<mat[endrow][i]<<" ";
+$8 = 4
+Not confirmed.
+Starting program: /home/saurav/Desktop/self/Programming-master/a.out 
+
+Breakpoint 1, spiral (startrow=0, startcol=0, endrow=4, endcol=7, mat=std::vector of length 5, capacity 5 = {...}) at spiralMat.cpp:5
+5	    if(startrow>endrow ||(startcol>endcol))
+Continuing.
+
+Breakpoint 1, spiral (startrow=1, startcol=1, endrow=3, endcol=6, mat=std::vector of length 5, capacity 5 = {...}) at spiralMat.cpp:5
+5	    if(startrow>endrow ||(startcol>endcol))
+Continuing.
+
+Breakpoint 1, spiral (startrow=2, startcol=2, endrow=2, endcol=5, mat=std::vector of length 5, capacity 5 = {...}) at spiralMat.cpp:5
+5	    if(startrow>endrow ||(startcol>endcol))
+$9 = std::vector of length 36, capacity 64 = {7, 67, 5, 49, 44, 24, 29, 89, 82, 50, 7, 41, 63, 38, 36, 22, 56, 59, 77, 36, 38, 5, 98, 18, 79, 12, 
+  81, 28, 23, 2, 10, 0, 63, 1, 6, 49}
+Exception ignored in: <gdb.GdbOutputFile object at 0x7f1fd61aad30>
+Traceback (most recent call last):
+  File "/usr/share/gdb/python/gdb/__init__.py", line 43, in flush
+    def flush(self):
+KeyboardInterrupt

@@ -4,6 +4,7 @@ using namespace std;
  {
      int data;
      Node* left, *right;
+     
 }; 
 
 vector<Node*> child;

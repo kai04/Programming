@@ -1,3 +1,8 @@
+network commands
+telnet 34.209.161.43 22
+tput reset
+tcpdump -i eth1 -w packets_file
+----------------------------------------------------------------------------------------------------
 sudo arp-scan --interface=eth0 --localnet       ============ List all system connected to Your LAN
 ssh sauravshri@mars.cse.iitb.ac.in              ============ Connect to mars system(ssh root@<IP>)
 ssh saurav@10.129.146.121
@@ -86,6 +91,87 @@ show databases;
 use <dbname>
 show <table name>
 
+---------------------------------------------------------------------------------------------
+unbound
+sudo /usr/local/sbin/unbound -c /critical/etc/unbound.conf
+sudo /usr/local/sbin/unbound -d -c /critical/etc/unbound.conf
+sudo /usr/local/sbin/unbound -c /critical/etc/unbound.conf -k restart
+
+---------------------------------------------------------------------------------------------
+squid
+sudo gdb /usr/local/squid/sbin/squid
+b unesc_chars
+run -N -f /critical/etc/squid.conf -d 5
+sudo /usr/local/squid/sbin/squid -f /critical/etc/squid.conf
+
+---------------------------------------------------------------------------------------------
+
+git 
+---------------------------------------------------------------------------------------------
+ git add DrHouse/
+git branch
+git push origin REL-1091-ClusterGeneric
+git commit -m "refs SUPASKS-1266: Made the binary cluster generic" DrHouse/
+git config --global user.email jayesh@securly.com
+git config --global user.name jayesh
+git config credential.helper store then git pull
+git remote -v  == check remote origin config
+git remote add origin https://github.com/kai04/Programming.git === adding remote origin 
+git pull --allow-unrelated-histories origin master   === force pull
+--------------------------
+git clone <url>
+git checkout QA
+git pull origin QA
+git checkout REL-1120-ios-sa-fb
+git branch
+git diff securly.cc
+git push origin REL-1120-ios-sa-fb
+git commit -m "refs WEBPROXY-224: iOS sentiment analysis for Facebook" securly.cc
+git fetch origin REL-1111-Self-harm-enhancement:REL-1111-Self-harm-enhancement
+git merge 20181009-V0-REL-1171-signoff  --- To merge latest signoff to your branch
+git diff branch_1..branch_2  --- differnece between two branch
+git branch -m <oldname> <newname> ====rename branch
+git branch -d branch_name   === delete locally
+git branch -D branch_name   ==== forced delete must be checkout from other branch
+git config merge.tool vimdiff
+git config merge.conflictstyle diff3
+git config mergetool.prompt false
+git mergetool
+git log --oneline
+git rm -r --cached <node to be removed>
+
+--------------------------------
+solving git conflict
+git log --graph  ---> visualize branches along with commit history
+git rebase -i sprint-cosme-2019
+a)squash all the commit except the top one(or u wish to kept it).Also u can put f corresponding whose commit messages u want to kept remain
+b)if this error occur:
+"CONFLICT (content): Merge conflict in src/securly.cc"
+c)open src/securly.cc
+d) search "======"
+e) choose the changes which you want to keep it and save it
+f) git add src/securly.cc
+g) git rebase --continue
+h) check if single commit and your changes shown on github web or not
+i) git log --graph  ---> verify new commits are correct
+j) git diff 5572473~ 5572473 ----> (here 5572473 commit tag prefix )see in the code if your changes are present or not
+
+---------------------------------------------
+td-agent
+conf file: /etc/td-agent/td-agent.conf
+process of td-agent: netstat -pant |grep 7007
+sudo service td-agent restart
+https://search-securlypune-qa-dev-lorniop3tg5ybhskmum46huv5q.us-west-2.es.amazonaws.com/_plugin/kibana/app/kibana#/discover?_g=()&_a=(columns:!(_source),index:b44517f0-6a6c-11e9-9550-1b355adbdadc,interval:auto,query:(language:lucene,query:%27%27),sort:!(TimeStamp,desc))
+------------------------------------------------
+ssh keys:
+puttygen SecurlyDev3.ppk -O private-openssh -o SecurlyDev3.pem
+ssh-add ~/yourkey.pem
+sudo openvpn --config client.ovpn
+------------------------------------------------
+python
+import pdb;pdb.set_trace()
+module.__file__ ==== location of module
+dir(module)   ===== list all func and attribute of module
 
 
 

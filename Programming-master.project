@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="Programming-master" Version="10.0.0" InternalType="">
+  <Description/>
+  <Dependencies/>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="" Assembler="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g -Wall" C_Options="" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="-O0" Required="yes">
+        <LibraryPath Value="."/>
+        <LibraryPath Value="Debug"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="./Debug" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="Default"/>
+      <Environment EnvVarSetName="&lt;Use Workspace Settings&gt;" DbgSetName="&lt;Use Global Settings&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+  <VirtualDirectory Name="backtracking">
+    <File Name="backtracking/K_coloring_graph.cpp"/>
+    <File Name="backtracking/TSP_backtrack.cpp"/>
+    <File Name="backtracking/Nqueens.cpp"/>
+    <File Name="backtracking/coloring.cpp"/>
+    <File Name="backtracking/HamiltonianCycle.cpp"/>
+    <File Name="backtracking/PermuteString.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="CodeBlocks">
+    <File Name="CodeBlocks/test.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Number System">
+    <File Name="Number System/generateprime.cpp"/>
+    <File Name="Number System/PrimeSeive.cpp"/>
+    <File Name="Number System/EulerTotient.cpp"/>
+    <File Name="Number System/gcd&amp;lcm.cpp"/>
+    <File Name="Number System/linearSeive.cpp"/>
+    <File Name="Number System/primalfear.cpp"/>
+    <File Name="Number System/allDivisorUptoN.cpp"/>
+    <File Name="Number System/Seive.cpp"/>
+    <File Name="Number System/sieveEratosthenes.cpp"/>
+    <File Name="Number System/gcd11.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="DP">
+    <File Name="DP/unique_tree.cpp"/>
+    <File Name="DP/Buy&amp;SellOnce.cpp"/>
+    <File Name="DP/longestPallindromeSubstring_D.cpp"/>
+    <File Name="DP/countUniqueNdigNum.cpp"/>
+    <File Name="DP/house-robber.cpp"/>
+    <File Name="DP/dp.cpp"/>
+    <File Name="DP/noOfUniqueBST.cpp"/>
+    <File Name="DP/maxSumSubarray.cpp"/>
+    <File Name="DP/UVa11450-Wedding-shopping.cpp"/>
+    <File Name="DP/noOfWaysPartionSet_D.cpp"/>
+    <File Name="DP/evaluateBooleanExp.cpp"/>
+    <File Name="DP/catalan.cpp"/>
+    <File Name="DP/baloon.cpp"/>
+    <File Name="DP/TargetSum.cpp"/>
+    <File Name="DP/max-sz-sub-mat-with-all-1s_D.cpp"/>
+    <File Name="DP/countSubarrayWithSumK_D.cpp"/>
+    <File Name="DP/divisor-game.cpp"/>
+    <File Name="DP/coinchange_D.cpp"/>
+    <File Name="DP/maxSubarrayNonConseSum.cpp"/>
+    <File Name="DP/subsetsum_D.cpp"/>
+    <File Name="DP/evaluate.cpp"/>
+    <File Name="DP/Buy&amp;SellwithFee.cpp"/>
+    <File Name="DP/minJump.cpp"/>
+    <File Name="DP/noOfLIS_D.cpp"/>
+    <File Name="DP/jumpGame.cpp"/>
+    <File Name="DP/chordCount.cpp"/>
+    <File Name="DP/tallest-billboard.cpp"/>
+    <File Name="DP/advDP.cpp"/>
+    <File Name="DP/The_Fair_Nut_and_String.cpp"/>
+    <File Name="DP/countNoofnon-cons1'sStr_D.cpp"/>
+    <File Name="DP/house-robber2.cpp"/>
+    <File Name="DP/maxFishCut.cpp"/>
+    <File Name="DP/coinChange.cpp"/>
+    <File Name="DP/LongestRepeatingseq_D.cpp"/>
+    <File Name="DP/partitionsum.cpp"/>
+    <File Name="DP/dijikstra.cpp"/>
+    <File Name="DP/edit.cpp"/>
+    <File Name="DP/Buy&amp;SellAtmostK_Txn.cpp"/>
+    <File Name="DP/perfectSqurare.cpp"/>
+    <File Name="DP/max2DRange.cpp"/>
+    <File Name="DP/countsubsequence_D.cpp"/>
+    <File Name="DP/basicdp.cpp"/>
+    <File Name="DP/DistinctSubsequence_D.cpp"/>
+    <File Name="DP/lcs_D.cpp"/>
+    <File Name="DP/largestSubsetdivisible_LIS.cpp"/>
+    <File Name="DP/LongestPalindrome_D.cpp"/>
+    <File Name="DP/minInsertionforPallindrome_D.cpp"/>
+    <File Name="DP/0_1Knapsack.cpp"/>
+    <File Name="DP/largestPossibleNumber.cpp"/>
+    <File Name="DP/LongestValidParenthesis_D.cpp"/>
+    <File Name="DP/decode.cpp"/>
+    <File Name="DP/LIS_D.cpp"/>
+    <File Name="DP/maxsquare.cpp"/>
+    <File Name="DP/coins237.cpp"/>
+    <File Name="DP/cutrod_D.cpp"/>
+    <File Name="DP/noOfDistinctSeq.cpp"/>
+    <File Name="DP/Buy&amp;SellAtmost2txn.cpp"/>
+    <File Name="DP/minPalindrome.cpp"/>
+    <File Name="DP/largestsubsequence.cpp"/>
+    <File Name="DP/nlognLIS_D.cpp"/>
+    <File Name="DP/russianDolls.cpp"/>
+    <File Name="DP/minimum-falling-path-sum.cpp"/>
+    <File Name="DP/FindSubarrayWithSumK.cpp"/>
+    <File Name="DP/ugly.cpp"/>
+    <File Name="DP/matChainMul.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Array">
+    <File Name="Array/arrayPairDivbyk.cpp"/>
+    <File Name="Array/findMinInRotatedArr.cpp"/>
+    <File Name="Array/hotelBooking.cpp"/>
+    <File Name="Array/maxConsecutive1's.cpp"/>
+    <File Name="Array/MergeIntervals.cpp"/>
+    <File Name="Array/allocateBooks.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Coding">
+    <File Name="Coding/MaxIndex.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="binarySearch">
+    <File Name="binarySearch/sqrt.cpp"/>
+    <File Name="binarySearch/binarysearch.cpp"/>
+    <File Name="binarySearch/matrixSearch.cpp"/>
+    <File Name="binarySearch/painter.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Programming-master">
+    <File Name="rottenTomoteos.cpp"/>
+    <File Name="sherlock and cost.cpp"/>
+    <File Name="lexicographicalOrderStr.cpp"/>
+    <File Name="subsetPartition.cpp"/>
+    <File Name="moddint.cpp"/>
+    <File Name="stringreduce.cpp"/>
+    <File Name="powersum.cpp"/>
+    <File Name="sort.cpp"/>
+    <File Name="nquery.cpp"/>
+    <File Name="kdistance4mNode.cpp"/>
+    <File Name="manasa.cpp"/>
+    <File Name="str_stack_ValidAfterSustituion.cpp"/>
+    <File Name="lower&amp;upper_bound.cpp"/>
+    <File Name="contest.cpp"/>
+    <File Name="dp.cpp"/>
+    <File Name="maxPathSumTree.cpp"/>
+    <File Name="spiral.cpp"/>
+    <File Name="noofpathingrid.cpp"/>
+    <File Name="BST4mPreorder.cpp"/>
+    <File Name="FstMissingPosNo.cpp"/>
+    <File Name="primequery.cpp"/>
+    <File Name="queue_inc.cpp"/>
+    <File Name="maxNumStock.cpp"/>
+    <File Name="countWay2ReachNStairs.cpp"/>
+    <File Name="minJumpArray.cpp"/>
+    <File Name="graph.cpp"/>
+    <File Name="PrimeQueries.cpp"/>
+    <File Name="matrix.cpp"/>
+    <File Name="samandsubstring.cpp"/>
+    <File Name="bigint.cpp"/>
+    <File Name="Xenny.cpp"/>
+    <File Name="knapsack_var2.cpp"/>
+    <File Name="Diagonal.cpp"/>
+    <File Name="absdiff.cpp"/>
+    <File Name="2dmatrix.cpp"/>
+    <File Name="knapsack.cpp"/>
+    <File Name="PrimeSeive.cpp"/>
+    <File Name="generateTreeDot.cpp"/>
+    <File Name="lower&amp;upperbound.cpp"/>
+    <File Name="leafsum@minlvl.cpp"/>
+    <File Name="segmenttree.cpp"/>
+    <File Name="bsearch.cpp"/>
+    <File Name="reverseLinkedList.cpp"/>
+    <File Name="equalArray.cpp"/>
+    <File Name="parenthesis.cpp"/>
+    <File Name="perfectString.cpp"/>
+    <File Name="MedianOfRunningStream.cpp"/>
+    <File Name="solve.cpp"/>
+    <File Name="journeytomoon.cpp"/>
+    <File Name="wordladder.cpp"/>
+    <File Name="journey.cpp"/>
+    <File Name="TSP.cpp"/>
+    <File Name="spiralTreeTraversal.cpp"/>
+    <File Name="wordbreak.cpp"/>
+    <File Name="countWays_kdeged.cpp"/>
+    <File Name="dijikstraGraph.cpp"/>
+    <File Name="minCostForTickets.cpp"/>
+    <File Name="KruskalMST.cpp"/>
+    <File Name="ReachMedian.cpp"/>
+    <File Name="max_minOfAllWindSz.cpp"/>
+    <File Name="subset.cpp"/>
+    <File Name="twopointer.cpp"/>
+    <File Name="largestHistogram.cpp"/>
+    <File Name="Knightmoves.cpp"/>
+    <File Name="bipartite.cpp"/>
+    <File Name="maxmin.cpp"/>
+    <File Name="nextgreater.cpp"/>
+    <File Name="topViewTree.cpp"/>
+    <File Name="tallest-billboard.cpp"/>
+    <File Name="Recursivedigit.cpp"/>
+    <File Name="maxOfAllKsizeSubarray.cpp"/>
+    <File Name="reverseStackRecursion.cpp"/>
+    <File Name="sumTree.cpp"/>
+    <File Name="pairwiseunion.cpp"/>
+    <File Name="greatestprimefactor.cpp"/>
+    <File Name="MaxIndex.cpp"/>
+    <File Name="jobsequencing.cpp"/>
+    <File Name="MincostPath.cpp"/>
+    <File Name="dijikstra.cpp"/>
+    <File Name="edit.cpp"/>
+    <File Name="greedyflorist.cpp"/>
+    <File Name="aeroplane.cpp"/>
+    <File Name="modd.cpp"/>
+    <File Name="roadtolibra.cpp"/>
+    <File Name="card1.cpp"/>
+    <File Name="maxProdSubarray.cpp"/>
+    <File Name="countSubseqAvgSumLessThanK.cpp"/>
+    <File Name="TSP_new.cpp"/>
+    <File Name="reverseWord.cpp"/>
+    <File Name="goodset.cpp"/>
+    <File Name="spiralMat.cpp"/>
+    <File Name="maxcoin.cpp"/>
+    <File Name="bellManFord.cpp"/>
+    <File Name="trie.cpp"/>
+    <File Name="maxPairXor.cpp"/>
+    <File Name="kth_Lexicographical.cpp"/>
+    <File Name="processLogFile.cpp"/>
+    <File Name="tree.cpp"/>
+    <File Name="test.cpp"/>
+    <File Name="largestPossibleNumber.cpp"/>
+    <File Name="sortStack.cpp"/>
+    <File Name="costpath.cpp"/>
+    <File Name="bitset.cpp"/>
+    <File Name="deque.cpp"/>
+    <File Name="aggressivecow.cpp"/>
+    <File Name="boolexpr_TD.cpp"/>
+    <File Name="countSubarrSumDivK.cpp"/>
+    <File Name="dummy.cpp"/>
+    <File Name="print&amp;detectcycle.cpp"/>
+    <File Name="cheffeast.cpp"/>
+    <File Name="trieMaxXor.cpp"/>
+    <File Name="topview.cpp"/>
+    <File Name="knapsack_var1.cpp"/>
+    <File Name="KLargestEltinArr.cpp"/>
+    <File Name="minDepthofBinaryTree.cpp"/>
+    <File Name="myknapsack.cpp"/>
+    <File Name="yahoo.cpp"/>
+    <File Name="snakeeat.cpp"/>
+    <File Name="reconstruct.cpp"/>
+    <File Name="shortestPathUndirectGraph.cpp"/>
+    <File Name="largestsubsequence.cpp"/>
+    <File Name="fisherman.cpp"/>
+    <File Name="triplet.cpp"/>
+  </VirtualDirectory>
+</CodeLite_Project>
