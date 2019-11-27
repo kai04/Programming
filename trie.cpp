@@ -1,61 +1,86 @@
-#include<bits/stdc++.h>
-using namespace std;
-typedef struct Trie{
-	map<char,Trie*> m;
-	bool isEndofWord;
-	Trie(){
-		isEndofWord = false;
-	}
-	Trie* getNextNode(char c){
-		auto it = m.find(c);
-		if(it!=m.end()){
-			return m[c];
-		}
-		else{
-			Trie* node = new Trie();
-			m[c] = node;
-			return m[c];	
-		}
-		return NULL;
-	}
-} Trie; 
+/*["Trie","insert","search","search","startsWith","insert","search"]
+[[],["apple"],["apple"],["app"],["app"],["app"],["app"]]*/
+//https://leetcode.com/problems/implement-trie-prefix-tree/submissions/
+class TrieNode
+{
+public:
+    TrieNode *next[26];
+    bool isEndofWord;
+    
+    // Initialize your data structure here.
+    TrieNode(bool b = false)
+    {
+        memset(next, 0, sizeof(next));
+        isEndofWord = b;
+    }
+};
+class Trie {
+public:
+    TrieNode *root;
+    /** Initialize your data structure here. */
+    Trie() {
+        root = new TrieNode();
+    }
+    /** Inserts a word into the trie. */
+    void insert(string word) {
+        TrieNode *currNode = root;
+        for(int i=0;i<word.length();i++){
+            if(currNode->next[word[i]-'a']!=NULL){
+                //char found
+                TrieNode *nextNode = currNode->next[word[i]-'a'];
+                currNode = nextNode;
+            }
+            else{
+                // char not found
+                TrieNode *newnode = new TrieNode();
+                currNode->next[word[i]-'a'] = newnode;
+                currNode = newnode;   
+            }
+        }
+        currNode->isEndofWord = true;
+    }
+    
+    /** Returns if the word is in the trie. */
+    bool search(string word) {
+        TrieNode *currNode = root;
+        for(int i=0;i<word.length();i++){
+            if(currNode->next[word[i]-'a']!=NULL){
+                //char found
+                TrieNode *nextNode = currNode->next[word[i]-'a'];
+                currNode = nextNode;
+            }
+            else{
+                // char not found
+                return false;   
+            }
+        }
+        if(currNode->isEndofWord)
+            return true;
+        return false;
+    }
+    
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    bool startsWith(string word) {
+        TrieNode *currNode = root;
+        for(int i=0;i<word.length();i++){
+            if(currNode->next[word[i]-'a']!=NULL){
+                //char found
+                TrieNode *nextNode = currNode->next[word[i]-'a'];
+                currNode = nextNode;
+            }
+            else{
+                // char not found
+                return false;   
+            }
+        }
+        return true;
+    }
+};
 
-bool find(string str,Trie* root){
-	Trie * curr;
-	curr = root;
-	for(int j=0 ;j<str.length();j++){
-		if((curr->m).find(str[j])!=(curr->m).end()){
-			Trie *next = curr->m[str[j]];
-			curr = next;
-		}
-		else{
-			return false;
-		}
-	}
-	if(curr->isEndofWord){
-		return true;
-	}
-	return false;
-}
-
-int main(){
-	int n;
-	cin>>n;
-	vector<string> s(n);
-	for(int i=0;i<n;i++){
-		cin>>s[i];
-	}
-	Trie *root = new Trie();
-	for(int i=0 ;i<n;i++){
-		Trie * curr;
-		curr = root;
-		for(int j=0 ;j<s[i].length();j++){
-			Trie *next = curr->getNextNode(s[i][j]);
-			if(j==s[i].length()-1){
-				curr->isEndofWord = true;
-			}
-			curr = next;
-		}
-	}
-	return 0;
-}
+/**
+ * Your Trie object will be instantiated and called as such:
+ * Trie* obj = new Trie();
+ * obj->insert(word);
+ * bool param_2 = obj->search(word);
+ * bool param_3 = obj->startsWith(prefix);
+ */
