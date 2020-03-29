@@ -1,0 +1,25 @@
+ref: https://www.w3resource.com/sql-exercises/sql-subqueries-exercises.php
+1)Write a query to display the name ( first name and last name ) for those employees who gets more salary than the employee whose ID is 163.
+select FIRST_NAME from employees where SALARY > (select SALARY from employees where EMPLOYEE_ID = 163);
+
+2) Write a query to display the name ( first name and last name ), salary, department id, job id for those employees who works in the same designation as the employee works whose id is 169
+
+select FIRST_NAME,LAST_NAME,SALARY,DEPARTMENT_ID,JOB_ID from employees where JOB_ID IN (select JOB_ID from employees where EMPLOYEE_ID = 169);
+
+3)Write an SQL query to find names of employee start with ‘A’
+SELECT * FROM Employees WHERE EmpName like 'A%' ;
+
+4) Query to find 2nd largest value in a column in Table
+
+SELECT MAX (Income) FROM Employee WHERE Salary NOT IN (SELECT Max (Income) FROM Employee);
+		
+			or
+
+SELECT column_name FROM table_name e WHERE 2 = (SELECT COUNT (DISTINCT column_name) FROM table_name p WHERE e.column_name<=p.column_name);
+
+5)  print duplicate rows in a table
+
+SELECT name, section FROM tbl GROUP BY name, section HAVING COUNT(*) > 1 
+
+
+

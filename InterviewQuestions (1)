@@ -1,0 +1,125 @@
+	Nishant Gupta
+
+Easy:
+1. 3D matrix M (N*N*N) where  N=100, Q queries are given (Q<=10^5) each having two coordinates (x1, y1, z1) and (x2, y2, z2) find the sum of the submatrix between these coordinates. (x1<x2, y1<y2, z1<z2). Every cell M[i][j][k] has an integer less than 10^5.
+
+2. There are N favorite songs of yours, you want to listen to. Every song is of A[i] seconds. You have "T" seconds in total to spare on the songs. Also you are fond of these songs equally so you want listen as many in stretch/continuation as possible in "T" seconds. What is the maximum number of continuous songs you would be able to listen in "T" seconds. (N<=10^5, A[i] <= 10^4, T<=10^9)
+
+3. (Easy Medium) A binary tree is given with root pointer, and every node has only left and right child pointer. Given another node N's pointer "node_ptr" from the same tree, you have to tell how many nodes are at distance "d" from node N. (number of nodes in tree <= 10^5, d <= 10^5).
+
+4. A string S of length N containing small english alphabets is given. Give the count of triplets (i, j, k) such that i<j<k and S[i], S[j], S[k] when concatenated gives the string "bob". (N <= 10^5)
+
+Medium:
+1. There are N poles of various heights, and you have a machine whose saw blade can be set at a specific height “h” and it cuts all poles till that height, such that all of them have height “h” after the cut. (Poles with height less than “h” remain uncut”). You have to take at least M length of poles with you in total after the cut. What is the maximum height where you can set your blade to achieve this. (N <= 10^5, M <= 10^12, Height of poles <= 10^9)
+
+2. An array A is given (length <= 10^5). Find the triplet of indices (i, j, k) such that i<j<k and A[i]<A[j]<A[k] and Product(A[i], A[j], A[k]) is maximum. (For every valid i, A[i] <= 10^6)
+
+3. There is a one player game with N rounds. In every round you are given a small task, if you do the task successfully you are awarded "a" points, if you fail to complete the task your points will be deducted by "b" points, if you feel the task is tough, you may choose to skip the task and move further which will give you 0 points for the round. At the end of all rounds, your final score is F. What is the count of all possible F at the end. (N <= 10^5, 1<=a, b<=20)
+
+4. There is an array of size N with elements as 0 initially. You are given U updates of type (L R X). For every such update you have to increase the value at indices from L to R (inclusive) with value X. After all such updates you will be given Q queries of type (idx), where you have to print the value present at index "idx". (1 <= N, Q, U, X <= 100000)
+
+5. https://www.spoj.com/problems/CZ_PROB1/ :: f(n, k) = f(n, k-1) + f(n-k, k) 
+
+
+Hard:
+1. A long plank is to be colored (length <= 10^7). There are N different types of paints (N < 10000). They are painted in order. Every colour is painted from L to R on the plank. A region if painted overpowers the color it already has, and has the new color on it. After all colors are painted in their respective regions, tell the number of distinct colors on the plank.
+
+2. A 2-D matrix (N*M) filled with either 0 or 1 is given. 1 denotes a bomb present in the cell, and 0 an empty cell. 
+Medium version : For a given integer "d" tell how many pairs of bombs are at distance "d".
+Hard version : Tell the same for every possible "d". (1<=d<=N+M-2)
+
+3. An array A of size N is given. Given L and R, count the number of subsets of A such that its sum is in the range [L, R]. (N<=32, 0<=L< R<=10^9, A[i]<=3*10^7)
+
+4. (Medium-Hard) : A tree of N nodes is given. You know several DFS tours are possible. Count the total number modulo (10^9 + 7)
+
+========================================================================
+
+Aman
+
+1.  There is a long bench which has N seats in it. Some of the seats are already occupied. Whenever someone wants to occupy a seat, they want to select the seats which is farthest from an occupied seat. If there are multiple available seats, then they prefer the seat number closest to first seat. (seat number is 0 for first seat) [MEDIUM]
+
+Input: 
+N [total number of seats]
+X [total number of occupied seats]
+Next x lines is the seat number which is occupied [Seat number is numbered from 0 to N-1]
+
+
+2. You're typing something in keyboard. Typed characters include a-z and backspace. In the end lets say you wrote, abc and then backspace, so final word is ab. Output the final word without taking any extra memory. [Easy/Medium]
+
+3. A single row of N stones are present. You get some coins  on reaching every stone but you cannot go back once you reach a stone. example: if you're at stone N, you cannot go to stone N-1, N-2 ... 0. What is the max number of coins you could make and you have to reach it to stone N. You start from stone 0. [MEDIUM]
+
+4. Create contact book [EASY]
+
+5. N numbers are given to you. 
+Query
+For every input number, tell me count of numbers in array which are smaller and larger than this number x.
+Modified version: N queries would be given of 2 type
+For every input number, tell me count of numbers in array which are smaller and larger than this number x.
+Addition of new numbers.
+[MEDIUM]
+
+6. You're getting a stream of numbers. At any given point of time 2 things could happen
+a. remove the first element of stream
+b. get subsum b/w 2 ranges of a stream [EASY]
+
+
+7. There are N currencies available in the world. Conversion between M pair of currencies are currently possible. 
+
+Example: N is 5 and M is 2 
+There are 2 possible conversions
+Conversion 1: [ currency1 : currency2 = 1 : 2]
+Conversion 2: [ currency2 : currency3 = 2 : 3]
+
+T number of queries. For every query:
+Given 2 currency, output if conversion is possible between them. If yes, what is the ratio b/w them [medium]  
+
+=======================================================
+
+
+
+Shubham Sharma
+
+
+1.Phonepe has a large a datacenter with n interconnected servers. Each server is connected to other server by varying length ethernet.
+As per the corporate social responsibility phonepe wants to donate some ethernet wires to a the local university.
+Phonepe's system admin can remove some ethernet wire from the data center,As long as any server in the datacenter can communicate to another server in the datacenter.
+
+Given as input the length of all ethernet wires connected in the datacenter and their source and destination server address.
+Figure out the maximum length of ethernet wire that phonepe can donate
+
+
+2.Each day you commute from guwahati to cherapunjee. There are multiple routes to reach cherapunjee from guwahati. 
+Each route has n number of stops in between. Everytime you encounter a stop due to pollution you incur some damage x.
+The total damage of the route is the maximum of all damage incurred in the route.
+You have to find out the shortest distance from guwahati to cherapunjee given you dont want to incur more damage than amount D.
+
+3.We want to solve path planning for a mobile robot cleaning a rectangular room floor with furniture.
+Consider the room floor paved with square tiles whose size fits the cleaning robot (1 × 1). There are 'clean tiles' and 'dirty tiles', and the robot can change a 'dirty tile' to a 'clean tile' by visiting the tile. Also there may be some obstacles (furniture) whose size fits a tile in the room. If there is an obstacle on a tile, the robot cannot visit it. The robot moves to an adjacent tile with one move. The tile onto which the robot moves must be one of four tiles (i.e., east, west, north or south) adjacent to the tile where the robot is present. The robot may visit a tile twice or more.
+Your task is to write a program which computes the minimum number of moves for the robot to change all 'dirty tiles' to 'clean tiles', if ever possible.
+
+
+
+========================================================================
+
+Ashwin
+ 
+There are N tiles on a path numbered 1…N, tile i is covered in fi feet of snow. You start off on tile 1 and need to reach tile N. Tile 1 and tile N are sheltered by the roof, so neither of these tiles has any snow. To step on the other tiles, you need to wear boots. You have B pairs of boots, numbered 1…B. Some pairs are more heavy-duty than others, and some pairs are more agile than others. Pair i lets you step in snow at most si feet deep, and lets you move at most di forward in each step. The boots are packed in such a way that you can only access the topmost pair at any given time. So at any time, you can either put on the topmost pair of boots (discarding your old pair) or discard the topmost pair of boots (making a new pair of boots accessible). You can only change boots while standing on a tile. If that tile has f feet of snow, both the boots you take off AND the boots you put on must be able to withstand at least f feet of snow. Intermediate pairs of boots which you discard without wearing do not need to satisfy this restriction. Determine the minimum number of pairs of boots you need to discard in order to reach N. You may assume that you are initially not wearing any boots. (Both N and B less than 250) 
+[MEDIUM-HARD]
+
+
+
+
+
+====================================
+Vibhor
+Questions
+
+You have a value N make change for Rs. N, consider there is unlimited denominations in Indian currency,  { 1, 2, 5, 10, 20, 50, 100, 200, 500, 2000} valued coins/notes, Find the minimum number of coins and/or notes needed to make the change for Rs N.
+
+
+Rupam and Ankit are both fond of collecting stones. They both follow this hobby diligently and go out finding stones together. So, one fine day they decided to play a small game. They decided to weigh each of the stones they found and note their weights down in a notepad. Then at the end of the day, both of them will compare their notes.
+It may happen that out of the stones they found, many will have the same weight. They will check how many stones there are of a particular weight. They both will find the weight with the highest frequency of occurrence. That is, the weight with the maximum number of stones. This weight will be their score. In case multiple weights have the same number of stones, the highest of these weights will be considered as the score.
+
+The person with higher score at the end of the day wins. If both have the same score, it's declared a tie. You need to determine the result."
+
+Determine if two given nodes are cousins of each other or not in a binary tree. Two nodes of binary tree are cousins of each other only if they have different parents but they have same level.
