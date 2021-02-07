@@ -1,0 +1,6 @@
+Given list of characters. abbabc...
+Smallest partitions bana ne the uske and return the number of partition.
+For ex, a se suru hoga pehla partition but first a se last a tk pura lena pdta since same character ek hi partition me aane chahiye.. usme b bich me aa rha is liye pichhe wala b bhi lena hoga so it will be 
+abbab and c. Ans is 2
+
+
