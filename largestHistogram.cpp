@@ -1,4 +1,5 @@
 //https://www.geeksforgeeks.org/largest-rectangle-under-histogram/
+//https://leetcode.com/problems/largest-rectangle-in-histogram/
 #include <bits/stdc++.h>
 using namespace std;
 map<int,int> nextsmaller_fromLeft(vector<int> a){

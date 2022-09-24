@@ -1,5 +1,6 @@
 //https://leetcode.com/problems/jump-game/submissions/
 //https://www.interviewbit.com/problems/jump-game-array/
+//https://leetcode.com/problems/jump-game-ii/submissions/
 class Solution {
 public:
     bool canJump(vector<int>& A) {

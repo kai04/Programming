@@ -26,7 +26,7 @@ int main() {
 	        for(int j=1;j<=W;j++){
 	            if(weight[i-1]<=j){
 	            	dp[i][j] = max(profit[i-1]+dp[i][j-weight[i-1]],dp[i-1][j]);// Comment if repetion not allowed
-	            	// dp[i][j] = max(profit[i-1]+dp[i-1][j-weight[i-1]],dp[i-1][j]);// UnComment if repetetion  allowed
+	            	//dp[i][j] = max(profit[i-1]+dp[i-1][j-weight[i-1]],dp[i-1][j]);// Comment if repetetion allowed
 	            }
 	            else{
 	                dp[i][j] = max(dp[i][j],dp[i-1][j]);

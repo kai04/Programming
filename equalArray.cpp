@@ -40,8 +40,8 @@ int getMinimumSwapsRequiredToMakeArrayEqual (vector<char> a, vector<char> b) {
        ans+=c_10/2;
        c_01 = c_01 %2;
        c_10 = c_10 %2;
-       if(c_10==c01){
-           ans + =c_10
+       if(c_10==c_01){
+           ans += c_10;
        }
        else{
            ans =-1;
