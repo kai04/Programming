@@ -1,0 +1,8 @@
+parent:4 min cost:3
+parent:3 min cost:3
+parent:2 min cost:3
+parent:1 min cost:3
+---------------------
+ parent:3 parent min cost count:1
+ parent:1 parent min cost count:3
+3
