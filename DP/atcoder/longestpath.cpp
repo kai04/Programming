@@ -36,12 +36,12 @@ int main(){
 		dfs(i,edges,visited,in_degree,dist);
 	}
 	int answer = 0;
-	for(int i=1;i<n;i++){
+	for(int i=1;i<=n;i++){
 		answer = max(answer,dist[i]);
 	}
-	//for(auto it:dist)
-		//cout<<it<<" ";
-	//cout<<endl;
+	// for(auto it:dist)
+	// 	cout<<it<<" ";
+	// cout<<endl;
 	
 	
     cout<<answer<<endl;

@@ -1,44 +1,26 @@
-#include <bits/stdc++.h> 
-using namespace std; 
-  
-
-int subCount(vector<int> arr, int n, int k) 
-{ 
- 
-    vector<int> remCount(k,0); 
-  
- 
-    int cumSum = 0; 
-    for (int i = 0; i < n; i++) { 
-        cumSum += arr[i]; 
- 
-        remCount[((cumSum % k) + k) % k]++; 
-    } 
-
-    for(int i=0;i<k;i++){
-        cout<<"i:"<<i<<" mod[i]:"<<mod[i]<<endl;
-    }  
-    int result = 0; // Initialize result 
-  
-    for (int i = 0; i < k; i++) 
- 
+//https://leetcode.com/problems/subarray-sums-divisible-by-k/description/
+class Solution {
+public:
+    int subarraysDivByK(vector<int>& A, int K) {
+        int n=A.size();
+        vector<int> temp(n+1,0);
+        vector<int> mod(K+1,0);
+        // temp[0]=A[0];
+        int cumSum=0;
+        for(int i=0;i<n;i++){
+            cumSum+=A[i];
+            // temp[i]=temp[i-1]+A[i-1];
+            mod[((cumSum % K) + K) % K]++;
+            // cout<<"i:"<<i<<endl;
+        }
+        int res=0;
+        for (int i = 0; i < K; i++) 
+        {
+            // cout<<"i:"<<i<<" hey"<<endl;
         if (mod[i] > 1) 
-            result += (mod[i] * (mod[i] - 1)) / 2; 
-
-    result += mod[0]; 
-  
-    return result; 
-} 
-
-
-int main() 
-{ 
-    int n,k;
-    cin>>n>>k;
-    vector<int> arr(n);
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
+            res += (mod[i] * (mod[i] - 1)) / 2;
+        }
+        res += mod[0]; 
+        return res;
     }
-    cout << subCount(arr, n, k) << endl;  
-    return 0; 
-} 
+};

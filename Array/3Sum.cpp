@@ -60,3 +60,32 @@ public:
         return res;
     }
 };
+
+//https://www.interviewbit.com/problems/3-sum/
+typedef long long ll;
+int Solution::threeSumClosest(vector<int> &A, int B) {
+    int ans = 0;
+    int diff = INT_MAX;
+    int n = A.size();
+    sort(A.begin(), A.end());
+    for(int i=0;i<n;i++){
+        int j=i+1;
+        int k=n-1;
+        while(j<k){
+            ll sum = A[i]+A[j]+A[k];
+            if(abs(sum-B)<diff){
+                    ans = sum;
+                    diff = abs(sum-B); 
+            }
+            // cout<<"i:"<<i<<" j:"<<j<<" k:"<<k<<" sum:"<<sum<<" diff:"<<diff<<" ans:"<<ans<<endl;
+            if(sum<B){
+                j++;
+            } else if(sum>B){
+                k--;
+            } else {
+                break;
+            }
+        }
+    }
+    return ans;
+}

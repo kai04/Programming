@@ -18,5 +18,5 @@ int main()
 {
 	int n;
 	cin>>n;
-	cout<<"ANS:"<<josephus(n,2)<<endl;
-}	
+	cout<<"ANS:"<<josephus(n,2)<<endl
+;}	
