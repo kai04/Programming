@@ -1,0 +1,46 @@
+countWordsEqualTo:rrtte [3]
+countWordsStartingWith:sadhu [1]
+countWordsStartingWith:rrt [3]
+countWordsEqualTo:hdk [0]
+countWordsEqualTo:dhkjdgad [1]
+==================================
+countWordsEqualTo:djh [1]
+countWordsStartingWith:sdg [2]
+==================================
+countWordsEqualTo:sfd [0]
+countWordsStartingWith:dsf [0]
+countWordsEqualTo:sdfs [0]
+==================================
+countWordsEqualTo:ttt [3]
+countWordsStartingWith:ttt [2]
+==================================
+countWordsEqualTo:asdasdsadasd [1]
+countWordsStartingWith:as [2]
+countWordsStartingWith:gk [1]
+countWordsEqualTo:sd [0]
+==================================
+countWordsEqualTo:jasgdakbda [1]
+countWordsStartingWith:jasgdakbda [1]
+countWordsEqualTo:ahdo [0]
+==================================
+3 1 3 0 1 | 1 2 | 0 0 0 | 3 2 | 1 2 1 0 | 1 1 0
+
+3
+1
+3
+0
+1
+1
+1
+0
+0
+0
+3
+2
+1
+2
+1
+0
+1
+1
+0

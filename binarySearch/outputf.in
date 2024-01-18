@@ -1,0 +1,8 @@
+N1:2 N2:6 X:4
+x:4 mid1:1 mid2:3 low:0 high:2 l1:25 r1:44 l2:-7 r2:4
+x:4 mid1:0 mid2:4 low:0 high:0 l1:-2147483648 r1:25 l2:4 r2:21
+Median:12.5
+==============================
+x:4 mid1:1 mid2:3 low:0 high:2 l1:25 r1:44 l2:-7 r2:4
+x:4 mid1:0 mid2:4 low:0 high:0 l1:-2147483648 r1:25 l2:4 r2:21
+Median:12.5

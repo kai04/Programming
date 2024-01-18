@@ -9,5 +9,6 @@
         "string_view": "cpp",
         "utility": "cpp",
         "valarray": "cpp"
-    }
+    },
+    "cmake.configureOnOpen": false
 }

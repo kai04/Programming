@@ -19,11 +19,7 @@ void singleSourceShortestPath(int src, vector<vector<pair<ll,ll>>> &edges, vecto
         for(int i=0;i<edges[v].size();i++){
             ll u = edges[v][i].first;
             ll wt = edges[v][i].second;
-            if(flag==1){
-                if(dist[u][1]> (dist[v][0]+wt)){
-                    dist[u][1] = dist[v][0]+wt;
-                    pq.push({dist[u][1],make_pair(u,1)});
-                }
+            if(flag==1){}
                 if(dist[u][1]> (dist[v][1]+wt)){
                     dist[u][1] = dist[v][1]+wt;
                     pq.push({dist[u][1],make_pair(u,1)});
